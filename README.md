@@ -17,3 +17,8 @@ $DOMAIN = cdn.handaru.dev
 // Use it with calling that variable
 icon = $DOMAIN/bedrock-perfected/bedrock-perfected-logo.svg
 ```
+
+## GitHub RAW URL
+```
+raw.githubusercontent.com/daniswastaken/hdn/main/{project}/{files.xyz}
+```
