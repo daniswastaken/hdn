@@ -18,6 +18,11 @@ $DOMAIN = cdn.handaru.dev
 icon = $DOMAIN/bedrock-perfected/bedrock-perfected-logo.svg
 ```
 
+You can also use this using the jsDelivr CDN.
+```
+https://cdn.jsdelivr.net/gh/daniswastaken/hdn@main/[folder]/[file-name.extension]
+```
+
 ## GitHub RAW URL
 ```
 raw.githubusercontent.com/daniswastaken/hdn/main/{project}/{files.xyz}
