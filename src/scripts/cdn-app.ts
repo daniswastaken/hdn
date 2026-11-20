@@ -20,6 +20,7 @@ interface AssetRecord {
   project: string | null;
   cdnPath: string;
   legacyPath: string | null;
+  thumbPath: string | null;
   gitPath: string;
   bytes: number;
   sizeFormatted: string;
@@ -103,6 +104,9 @@ const state = {
 
 const loadedFontFamilies = new Map<string, string>();
 let toastTimer: number | undefined;
+let lazyObserver: IntersectionObserver | null = null;
+const PLACEHOLDER_IMG =
+  'data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201%201%22/%3E';
 
 function el<T extends HTMLElement>(id: string): T {
   const node = document.getElementById(id);
@@ -144,6 +148,59 @@ function activeAssetUrl(asset: AssetRecord): string {
 
 function localPreviewSrc(asset: AssetRecord): string {
   return `.${asset.cdnPath}`;
+}
+
+function localThumbSrc(asset: AssetRecord): string {
+  return asset.thumbPath ? `.${asset.thumbPath}` : localPreviewSrc(asset);
+}
+
+function renderLazyImg(
+  src: string,
+  alt: string,
+  className: string,
+  dims?: AssetDimensions | null,
+): string {
+  const dimAttrs = dims ? ` width="${dims.width}" height="${dims.height}"` : '';
+  return `<img src="${PLACEHOLDER_IMG}" data-src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" fetchpriority="low"${dimAttrs} class="${className} opacity-0 transition-opacity duration-150" />`;
+}
+
+function revealImg(img: HTMLImageElement): void {
+  const target = img.dataset.src;
+  if (!target) return;
+  delete img.dataset.src;
+  const done = () => img.classList.remove('opacity-0');
+  img.addEventListener('load', done, { once: true });
+  img.addEventListener('error', done, { once: true });
+  img.src = target;
+  if (img.complete) done();
+}
+
+function observeLazyImages(root: ParentNode = document): void {
+  const imgs = Array.from(root.querySelectorAll<HTMLImageElement>('img[data-src]'));
+  if (imgs.length === 0) return;
+
+  if (!('IntersectionObserver' in window)) {
+    for (const img of imgs) revealImg(img);
+    return;
+  }
+
+  if (!lazyObserver) {
+    lazyObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const img = entry.target as HTMLImageElement;
+          lazyObserver?.unobserve(img);
+          revealImg(img);
+        }
+      },
+      { rootMargin: '160px 0px', threshold: 0.01 },
+    );
+  }
+
+  for (const img of imgs) {
+    lazyObserver.observe(img);
+  }
 }
 
 function showToast(message: string, isError = false): void {
@@ -348,7 +405,7 @@ function renderCardPreview(asset: AssetRecord): string {
     }
     return `
       <div class="${surf} h-36 ${pad} border-b hdn-border flex items-center justify-center overflow-hidden">
-        <img src="${localPreviewSrc(asset)}" alt="${escapeHtml(asset.name)}" loading="lazy" class="max-h-full max-w-full object-contain" />
+        ${renderLazyImg(localThumbSrc(asset), asset.name, 'max-h-full max-w-full object-contain', asset.dimensions)}
       </div>
     `;
   }
@@ -356,7 +413,12 @@ function renderCardPreview(asset: AssetRecord): string {
   if (asset.category === 'image') {
     return `
       <div class="${surf} h-36 border-b hdn-border flex items-center justify-center overflow-hidden relative">
-        <img src="${localPreviewSrc(asset)}" alt="${escapeHtml(asset.name)}" loading="lazy" class="w-full h-full object-contain p-1.5" />
+        ${renderLazyImg(localThumbSrc(asset), asset.name, 'w-full h-full object-contain p-1.5', asset.dimensions)}
+        ${
+          asset.thumbPath
+            ? '<span class="pointer-events-none absolute bottom-1.5 right-1.5 px-1.5 py-0.5 bg-[var(--hdn-bg)]/85 border hdn-border font-[var(--font-mono)] text-[9px] text-[var(--hdn-ink-muted)]">360p PREVIEW</span>'
+            : ''
+        }
       </div>
     `;
   }
@@ -467,7 +529,7 @@ function renderTable(items: AssetRecord[]): string {
             .map((asset) => {
               let thumb = `<span class="text-[10px] text-[var(--hdn-accent)]">${escapeHtml(asset.ext)}</span>`;
               if (asset.category === 'image') {
-                thumb = `<img src="${localPreviewSrc(asset)}" alt="" loading="lazy" class="w-8 h-8 object-contain" />`;
+                thumb = renderLazyImg(localThumbSrc(asset), '', 'w-8 h-8 object-contain', asset.dimensions);
               } else if ((asset.category === 'icon' || asset.category === 'svg') && asset.inlineSvg) {
                 thumb = `<div class="w-6 h-6 [&>svg]:w-full [&>svg]:h-full">${asset.inlineSvg}</div>`;
               } else if (asset.category === 'font') {
@@ -624,6 +686,7 @@ function render(): void {
   }
 
   stage.innerHTML = state.view === 'grid' ? renderGrid(items) : renderTable(items);
+  observeLazyImages(stage);
 }
 
 function resetAllFilters(): void {
@@ -649,6 +712,13 @@ function renderInspector(asset: AssetRecord): void {
 
   const inspStage = el('insp-stage');
   inspStage.className = `${surfaceClass()} min-h-[210px] max-h-[340px] flex items-center justify-center p-4 overflow-auto`;
+
+  const inspStageLabel = el('insp-stage-label');
+  if (asset.category === 'image' && asset.thumbPath && asset.dimensions) {
+    inspStageLabel.textContent = `THUMBNAIL PREVIEW (360p) · RAW ${asset.dimensions.width}×${asset.dimensions.height}`;
+  } else {
+    inspStageLabel.textContent = 'LIVE PREVIEW';
+  }
 
   const tintsWrap = el('insp-svg-tints');
   if (asset.category === 'icon' || asset.category === 'svg') {
@@ -689,7 +759,13 @@ function renderInspector(asset: AssetRecord): void {
       </div>
     `;
   } else if (asset.category === 'image' || asset.category === 'svg' || asset.category === 'icon') {
-    inspStage.innerHTML = `<img src="${localPreviewSrc(asset)}" alt="${escapeHtml(asset.name)}" class="max-w-full max-h-[300px] object-contain" />`;
+    inspStage.innerHTML = renderLazyImg(
+      localThumbSrc(asset),
+      asset.name,
+      'max-w-full max-h-[300px] object-contain',
+      asset.dimensions,
+    );
+    inspStage.querySelectorAll<HTMLImageElement>('img[data-src]').forEach(revealImg);
   } else {
     inspStage.innerHTML = `
       <div class="text-center font-[var(--font-mono)] space-y-2">

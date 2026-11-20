@@ -5,7 +5,7 @@ const normalize = args.has('--normalize');
 const autoLfs = args.has('--auto-lfs');
 const updateReadme = args.has('--readme');
 
-const result = syncCdn({
+const result = await syncCdn({
   syncPublic: true,
   normalize,
   autoLfs,

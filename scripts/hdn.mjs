@@ -117,7 +117,7 @@ function resolveAssetMatches(manifest, target) {
   return manifest.assets.filter((a) => a.name === clean || a.id.endsWith(`/${clean}`));
 }
 
-function cmdAdd(args, flags) {
+async function cmdAdd(args, flags) {
   if (args.length === 0) {
     console.error('Error: specify one or more file paths to add.');
     process.exit(1);
@@ -159,7 +159,7 @@ function cmdAdd(args, flags) {
     console.log(`[ADD] cdn/${relFromCdn} (${formatBytes(stat.size)})`);
   }
 
-  const syncRes = syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
+  const syncRes = await syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
   for (const item of added) {
     const record = syncRes.manifest.assets.find((a) => a.id === item.relFromCdn);
     if (record) {
@@ -173,7 +173,7 @@ function cmdAdd(args, flags) {
   maybeCommitAndPush(flags, `feat(cdn): add ${added.map((a) => a.relFromCdn).join(', ')}`);
 }
 
-function cmdRemove(args, flags) {
+async function cmdRemove(args, flags) {
   if (args.length === 0) {
     console.error('Error: specify one or more asset paths or filenames to remove.');
     process.exit(1);
@@ -203,11 +203,11 @@ function cmdRemove(args, flags) {
     }
   }
 
-  syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
+  await syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
   maybeCommitAndPush(flags, `chore(cdn): remove ${removed.join(', ')}`);
 }
 
-function cmdMove(args, flags) {
+async function cmdMove(args, flags) {
   if (args.length < 2) {
     console.error('Usage: pnpm hdn move <source-asset> <dest-folder-or-path>');
     process.exit(1);
@@ -233,7 +233,7 @@ function cmdMove(args, flags) {
   const newRel = toPosix(path.relative(CDN_DIR, destPath));
   console.log(`[MV] ${srcAsset.gitPath} -> cdn/${newRel}`);
 
-  syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
+  await syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
   maybeCommitAndPush(flags, `chore(cdn): move ${srcAsset.id} -> ${newRel}`);
 }
 
@@ -268,8 +268,8 @@ function cmdList(flags) {
   }
 }
 
-function cmdSync(flags) {
-  const res = syncCdn({
+async function cmdSync(flags) {
+  const res = await syncCdn({
     syncPublic: true,
     normalize: Boolean(flags.normalize),
     autoLfs: flags['auto-lfs'] !== false,
@@ -288,10 +288,10 @@ function cmdSync(flags) {
   );
 }
 
-function cmdLfs(args) {
+async function cmdLfs(args) {
   const sub = args[0] || 'status';
   if (sub === 'track-large') {
-    const res = syncCdn({ syncPublic: true, autoLfs: true });
+    const res = await syncCdn({ syncPublic: true, autoLfs: true });
     console.log(`[LFS] Auto-tracked ${res.lfsUpdate.trackedPaths.length} file(s) >= 10MB in .gitattributes.`);
     return;
   }
@@ -367,26 +367,26 @@ const { positionals, flags } = parseArgs(rest);
 
 switch (command) {
   case 'add':
-    cmdAdd(positionals, flags);
+    await cmdAdd(positionals, flags);
     break;
   case 'remove':
   case 'rm':
   case 'delete':
-    cmdRemove(positionals, flags);
+    await cmdRemove(positionals, flags);
     break;
   case 'move':
   case 'mv':
-    cmdMove(positionals, flags);
+    await cmdMove(positionals, flags);
     break;
   case 'list':
   case 'ls':
     cmdList(flags);
     break;
   case 'sync':
-    cmdSync(flags);
+    await cmdSync(flags);
     break;
   case 'lfs':
-    cmdLfs(positionals);
+    await cmdLfs(positionals);
     break;
   case 'doctor':
     cmdDoctor(flags);

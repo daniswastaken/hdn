@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generatedAt": "2026-11-20T08:27:53.127Z",
+  "generatedAt": "2026-11-20T11:30:49.831Z",
   "repo": {
     "owner": "daniswastaken",
     "name": "hdn",
@@ -93,6 +93,7 @@
       "project": null,
       "cdnPath": "/fonts/inter-400.woff2",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/fonts/inter-400.woff2",
       "bytes": 23664,
       "sizeFormatted": "23.1 KB",
@@ -112,7 +113,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:12:58.460Z"
     },
     {
       "id": "fonts/inter-600.woff2",
@@ -124,6 +125,7 @@
       "project": null,
       "cdnPath": "/fonts/inter-600.woff2",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/fonts/inter-600.woff2",
       "bytes": 24452,
       "sizeFormatted": "23.9 KB",
@@ -143,7 +145,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:12:58.767Z"
     },
     {
       "id": "fonts/jetbrains-mono-400.woff2",
@@ -155,6 +157,7 @@
       "project": null,
       "cdnPath": "/fonts/jetbrains-mono-400.woff2",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/fonts/jetbrains-mono-400.woff2",
       "bytes": 21168,
       "sizeFormatted": "20.7 KB",
@@ -174,7 +177,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:12:52.605Z"
     },
     {
       "id": "fonts/jetbrains-mono-500.woff2",
@@ -186,6 +189,7 @@
       "project": null,
       "cdnPath": "/fonts/jetbrains-mono-500.woff2",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/fonts/jetbrains-mono-500.woff2",
       "bytes": 21832,
       "sizeFormatted": "21.3 KB",
@@ -205,7 +209,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:12:52.625Z"
     },
     {
       "id": "fonts/jetbrains-mono-700.woff2",
@@ -217,6 +221,7 @@
       "project": null,
       "cdnPath": "/fonts/jetbrains-mono-700.woff2",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/fonts/jetbrains-mono-700.woff2",
       "bytes": 21908,
       "sizeFormatted": "21.4 KB",
@@ -236,7 +241,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:12:52.819Z"
     },
     {
       "id": "fonts/space-grotesk-500.woff2",
@@ -248,6 +253,7 @@
       "project": null,
       "cdnPath": "/fonts/space-grotesk-500.woff2",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/fonts/space-grotesk-500.woff2",
       "bytes": 13312,
       "sizeFormatted": "13.0 KB",
@@ -267,7 +273,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:12:29.171Z"
     },
     {
       "id": "fonts/space-grotesk-700.woff2",
@@ -279,6 +285,7 @@
       "project": null,
       "cdnPath": "/fonts/space-grotesk-700.woff2",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/fonts/space-grotesk-700.woff2",
       "bytes": 12840,
       "sizeFormatted": "12.5 KB",
@@ -298,7 +305,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:12:29.216Z"
     },
     {
       "id": "icons/arrow-up-right.svg",
@@ -310,6 +317,7 @@
       "project": null,
       "cdnPath": "/icons/arrow-up-right.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/arrow-up-right.svg",
       "bytes": 210,
       "sizeFormatted": "210 B",
@@ -327,7 +335,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M7 17L17 7M17 7H8M17 7V16\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.728Z"
+      "updatedAt": "2026-11-20T07:10:43.315Z"
     },
     {
       "id": "icons/check.svg",
@@ -339,6 +347,7 @@
       "project": null,
       "cdnPath": "/icons/check.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/check.svg",
       "bytes": 200,
       "sizeFormatted": "200 B",
@@ -356,7 +365,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M20 6L9 17L4 12\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:44.321Z"
     },
     {
       "id": "icons/copy.svg",
@@ -368,6 +377,7 @@
       "project": null,
       "cdnPath": "/icons/copy.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/copy.svg",
       "bytes": 244,
       "sizeFormatted": "244 B",
@@ -385,7 +395,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <rect x=\"9\" y=\"9\" width=\"12\" height=\"12\"/>\n  <path d=\"M5 15H3V3H15V5\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:46.044Z"
     },
     {
       "id": "icons/download.svg",
@@ -397,6 +407,7 @@
       "project": null,
       "cdnPath": "/icons/download.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/download.svg",
       "bytes": 245,
       "sizeFormatted": "245 B",
@@ -414,7 +425,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 3V15M12 15L7 10M12 15L17 10\"/>\n  <path d=\"M4 17V20H20V17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:48.107Z"
     },
     {
       "id": "icons/file-code.svg",
@@ -426,6 +437,7 @@
       "project": null,
       "cdnPath": "/icons/file-code.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/file-code.svg",
       "bytes": 281,
       "sizeFormatted": "281 B",
@@ -443,7 +455,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M14 3H5V21H19V8L14 3Z\"/>\n  <path d=\"M14 3V8H19\"/>\n  <path d=\"M10 13L8 15L10 17M14 13L16 15L14 17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:49.840Z"
     },
     {
       "id": "icons/folder.svg",
@@ -455,6 +467,7 @@
       "project": null,
       "cdnPath": "/icons/folder.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/folder.svg",
       "bytes": 207,
       "sizeFormatted": "207 B",
@@ -472,7 +485,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M3 5H9L11 8H21V19H3V5Z\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:51.466Z"
     },
     {
       "id": "icons/github.svg",
@@ -484,6 +497,7 @@
       "project": null,
       "cdnPath": "/icons/github.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/github.svg",
       "bytes": 477,
       "sizeFormatted": "477 B",
@@ -501,7 +515,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M9 19C4.7 20.4 4.7 16.5 3 16M15 21V17.5C15 16.4 14.9 15.6 14.3 15C17.1 14.7 20 13.6 20 9C20 7.7 19.5 6.6 18.7 5.7C19 4.9 19 3.7 18.5 2.7C18.5 2.7 17.5 2.4 15 4C13.1 3.5 10.9 3.5 9 4C6.5 2.4 5.5 2.7 5.5 2.7C5 3.7 5 4.9 5.3 5.7C4.5 6.6 4 7.7 4 9C4 13.6 6.9 14.7 9.7 15C9.1 15.6 9 16.4 9 17.5V21\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:53.428Z"
     },
     {
       "id": "icons/globe.svg",
@@ -513,6 +527,7 @@
       "project": null,
       "cdnPath": "/icons/globe.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/globe.svg",
       "bytes": 346,
       "sizeFormatted": "346 B",
@@ -530,7 +545,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <circle cx=\"12\" cy=\"12\" r=\"9\"/>\n  <path d=\"M3 12H21\"/>\n  <path d=\"M12 3C14.5 5.7 15.8 8.8 15.8 12C15.8 15.2 14.5 18.3 12 21C9.5 18.3 8.2 15.2 8.2 12C8.2 8.8 9.5 5.7 12 3Z\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:55.249Z"
     },
     {
       "id": "icons/image.svg",
@@ -542,6 +557,7 @@
       "project": null,
       "cdnPath": "/icons/image.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/image.svg",
       "bytes": 285,
       "sizeFormatted": "285 B",
@@ -559,7 +575,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <rect x=\"3\" y=\"4\" width=\"18\" height=\"16\"/>\n  <circle cx=\"8.5\" cy=\"9.5\" r=\"1.5\"/>\n  <path d=\"M21 16L16 11L6 20\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:57.416Z"
     },
     {
       "id": "icons/layers.svg",
@@ -571,6 +587,7 @@
       "project": null,
       "cdnPath": "/icons/layers.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/layers.svg",
       "bytes": 281,
       "sizeFormatted": "281 B",
@@ -588,7 +605,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 3L21 8L12 13L3 8L12 3Z\"/>\n  <path d=\"M3 12.5L12 17.5L21 12.5\"/>\n  <path d=\"M3 17L12 22L21 17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:10:59.650Z"
     },
     {
       "id": "icons/search.svg",
@@ -600,6 +617,7 @@
       "project": null,
       "cdnPath": "/icons/search.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/search.svg",
       "bytes": 241,
       "sizeFormatted": "241 B",
@@ -617,7 +635,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/>\n  <path d=\"M15.5 15.5L21 21\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:11:02.442Z"
     },
     {
       "id": "icons/sparkles-off.svg",
@@ -629,6 +647,7 @@
       "project": null,
       "cdnPath": "/icons/sparkles-off.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/sparkles-off.svg",
       "bytes": 285,
       "sizeFormatted": "285 B",
@@ -646,7 +665,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 3V7M12 17V21M3 12H7M17 12H21\"/>\n  <rect x=\"9\" y=\"9\" width=\"6\" height=\"6\"/>\n  <path d=\"M4 4L20 20\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:11:04.169Z"
     },
     {
       "id": "icons/terminal.svg",
@@ -658,6 +677,7 @@
       "project": null,
       "cdnPath": "/icons/terminal.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/terminal.svg",
       "bytes": 256,
       "sizeFormatted": "256 B",
@@ -675,7 +695,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <rect x=\"3\" y=\"4\" width=\"18\" height=\"16\"/>\n  <path d=\"M7 9L10.5 12L7 15M12 15H17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:11:06.310Z"
     },
     {
       "id": "icons/trash.svg",
@@ -687,6 +707,7 @@
       "project": null,
       "cdnPath": "/icons/trash.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/trash.svg",
       "bytes": 233,
       "sizeFormatted": "233 B",
@@ -704,7 +725,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M4 6H20M9 6V3H15V6M6 6V21H18V6M10 10V17M14 10V17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:11:07.662Z"
     },
     {
       "id": "icons/type.svg",
@@ -716,6 +737,7 @@
       "project": null,
       "cdnPath": "/icons/type.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/type.svg",
       "bytes": 212,
       "sizeFormatted": "212 B",
@@ -733,7 +755,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M4 7V4H20V7M12 4V20M9 20H15\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:11:09.792Z"
     },
     {
       "id": "icons/upload.svg",
@@ -745,6 +767,7 @@
       "project": null,
       "cdnPath": "/icons/upload.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/icons/upload.svg",
       "bytes": 241,
       "sizeFormatted": "241 B",
@@ -762,7 +785,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 15V3M12 3L7 8M12 3L17 8\"/>\n  <path d=\"M4 17V20H20V17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.729Z"
+      "updatedAt": "2026-11-20T07:11:11.974Z"
     },
     {
       "id": "projects/grafika/2-0-hd.png",
@@ -774,6 +797,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/2-0-hd.png",
       "legacyPath": "/grafika/2-0-hd.png",
+      "thumbPath": "/_thumbs/projects/grafika/2-0-hd.png.webp",
       "gitPath": "cdn/projects/grafika/2-0-hd.png",
       "bytes": 1156613,
       "sizeFormatted": "1.10 MB",
@@ -791,7 +815,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.749Z"
+      "updatedAt": "2026-11-20T07:00:58.639Z"
     },
     {
       "id": "projects/grafika/a-distant-horizon.png",
@@ -803,6 +827,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/a-distant-horizon.png",
       "legacyPath": "/grafika/a-distant-horizon.png",
+      "thumbPath": "/_thumbs/projects/grafika/a-distant-horizon.png.webp",
       "gitPath": "cdn/projects/grafika/a-distant-horizon.png",
       "bytes": 1104633,
       "sizeFormatted": "1.05 MB",
@@ -820,7 +845,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.750Z"
+      "updatedAt": "2026-11-20T07:00:58.645Z"
     },
     {
       "id": "projects/grafika/arc-en-ciel.png",
@@ -832,6 +857,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/arc-en-ciel.png",
       "legacyPath": "/grafika/arc-en-ciel.png",
+      "thumbPath": "/_thumbs/projects/grafika/arc-en-ciel.png.webp",
       "gitPath": "cdn/projects/grafika/arc-en-ciel.png",
       "bytes": 822493,
       "sizeFormatted": "803.2 KB",
@@ -849,7 +875,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.751Z"
+      "updatedAt": "2026-11-20T07:00:58.649Z"
     },
     {
       "id": "projects/grafika/balemoon-crimson.png",
@@ -861,6 +887,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/balemoon-crimson.png",
       "legacyPath": "/grafika/balemoon-crimson.png",
+      "thumbPath": "/_thumbs/projects/grafika/balemoon-crimson.png.webp",
       "gitPath": "cdn/projects/grafika/balemoon-crimson.png",
       "bytes": 1343089,
       "sizeFormatted": "1.28 MB",
@@ -878,7 +905,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.753Z"
+      "updatedAt": "2026-11-20T07:00:58.656Z"
     },
     {
       "id": "projects/grafika/by-the-fireplace.png",
@@ -890,6 +917,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/by-the-fireplace.png",
       "legacyPath": "/grafika/by-the-fireplace.png",
+      "thumbPath": "/_thumbs/projects/grafika/by-the-fireplace.png.webp",
       "gitPath": "cdn/projects/grafika/by-the-fireplace.png",
       "bytes": 1048542,
       "sizeFormatted": "1024.0 KB",
@@ -907,7 +935,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.755Z"
+      "updatedAt": "2026-11-20T07:00:58.661Z"
     },
     {
       "id": "projects/grafika/case-of-singularity.png",
@@ -919,6 +947,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/case-of-singularity.png",
       "legacyPath": "/grafika/case-of-singularity.png",
+      "thumbPath": "/_thumbs/projects/grafika/case-of-singularity.png.webp",
       "gitPath": "cdn/projects/grafika/case-of-singularity.png",
       "bytes": 1072720,
       "sizeFormatted": "1.02 MB",
@@ -936,7 +965,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.757Z"
+      "updatedAt": "2026-11-20T07:00:58.668Z"
     },
     {
       "id": "projects/grafika/cottage-in-sight.png",
@@ -948,6 +977,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/cottage-in-sight.png",
       "legacyPath": "/grafika/cottage-in-sight.png",
+      "thumbPath": "/_thumbs/projects/grafika/cottage-in-sight.png.webp",
       "gitPath": "cdn/projects/grafika/cottage-in-sight.png",
       "bytes": 905250,
       "sizeFormatted": "884.0 KB",
@@ -965,7 +995,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.758Z"
+      "updatedAt": "2026-11-20T07:00:58.673Z"
     },
     {
       "id": "projects/grafika/delta-s-nature.png",
@@ -977,6 +1007,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/delta-s-nature.png",
       "legacyPath": "/grafika/delta-s-nature.png",
+      "thumbPath": "/_thumbs/projects/grafika/delta-s-nature.png.webp",
       "gitPath": "cdn/projects/grafika/delta-s-nature.png",
       "bytes": 1433744,
       "sizeFormatted": "1.37 MB",
@@ -994,7 +1025,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.760Z"
+      "updatedAt": "2026-11-20T07:00:58.679Z"
     },
     {
       "id": "projects/grafika/delta-t.png",
@@ -1006,6 +1037,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/delta-t.png",
       "legacyPath": "/grafika/delta-t.png",
+      "thumbPath": "/_thumbs/projects/grafika/delta-t.png.webp",
       "gitPath": "cdn/projects/grafika/delta-t.png",
       "bytes": 1202270,
       "sizeFormatted": "1.15 MB",
@@ -1023,7 +1055,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.762Z"
+      "updatedAt": "2026-11-20T07:00:58.686Z"
     },
     {
       "id": "projects/grafika/dreams-aria.png",
@@ -1035,6 +1067,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/dreams-aria.png",
       "legacyPath": "/grafika/dreams-aria.png",
+      "thumbPath": "/_thumbs/projects/grafika/dreams-aria.png.webp",
       "gitPath": "cdn/projects/grafika/dreams-aria.png",
       "bytes": 489373,
       "sizeFormatted": "477.9 KB",
@@ -1052,7 +1085,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.762Z"
+      "updatedAt": "2026-11-20T07:00:58.688Z"
     },
     {
       "id": "projects/grafika/dusty-dusk.png",
@@ -1064,6 +1097,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/dusty-dusk.png",
       "legacyPath": "/grafika/dusty-dusk.png",
+      "thumbPath": "/_thumbs/projects/grafika/dusty-dusk.png.webp",
       "gitPath": "cdn/projects/grafika/dusty-dusk.png",
       "bytes": 974425,
       "sizeFormatted": "951.6 KB",
@@ -1081,7 +1115,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.763Z"
+      "updatedAt": "2026-11-20T07:00:58.693Z"
     },
     {
       "id": "projects/grafika/hopes.png",
@@ -1093,6 +1127,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/hopes.png",
       "legacyPath": "/grafika/hopes.png",
+      "thumbPath": "/_thumbs/projects/grafika/hopes.png.webp",
       "gitPath": "cdn/projects/grafika/hopes.png",
       "bytes": 456793,
       "sizeFormatted": "446.1 KB",
@@ -1110,7 +1145,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.764Z"
+      "updatedAt": "2026-11-20T07:00:58.696Z"
     },
     {
       "id": "projects/grafika/icy-nights.png",
@@ -1122,6 +1157,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/icy-nights.png",
       "legacyPath": "/grafika/icy-nights.png",
+      "thumbPath": "/_thumbs/projects/grafika/icy-nights.png.webp",
       "gitPath": "cdn/projects/grafika/icy-nights.png",
       "bytes": 785294,
       "sizeFormatted": "766.9 KB",
@@ -1139,7 +1175,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.765Z"
+      "updatedAt": "2026-11-20T07:00:58.700Z"
     },
     {
       "id": "projects/grafika/lively-mossy.png",
@@ -1151,6 +1187,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/lively-mossy.png",
       "legacyPath": "/grafika/lively-mossy.png",
+      "thumbPath": "/_thumbs/projects/grafika/lively-mossy.png.webp",
       "gitPath": "cdn/projects/grafika/lively-mossy.png",
       "bytes": 1850203,
       "sizeFormatted": "1.76 MB",
@@ -1168,7 +1205,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.767Z"
+      "updatedAt": "2026-11-20T07:00:58.707Z"
     },
     {
       "id": "projects/grafika/misty-bamboo.png",
@@ -1180,6 +1217,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/misty-bamboo.png",
       "legacyPath": "/grafika/misty-bamboo.png",
+      "thumbPath": "/_thumbs/projects/grafika/misty-bamboo.png.webp",
       "gitPath": "cdn/projects/grafika/misty-bamboo.png",
       "bytes": 1619295,
       "sizeFormatted": "1.54 MB",
@@ -1197,7 +1235,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.770Z"
+      "updatedAt": "2026-11-20T07:00:58.716Z"
     },
     {
       "id": "projects/grafika/moon-s-trace.png",
@@ -1209,6 +1247,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/moon-s-trace.png",
       "legacyPath": "/grafika/moon-s-trace.png",
+      "thumbPath": "/_thumbs/projects/grafika/moon-s-trace.png.webp",
       "gitPath": "cdn/projects/grafika/moon-s-trace.png",
       "bytes": 812317,
       "sizeFormatted": "793.3 KB",
@@ -1226,7 +1265,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.771Z"
+      "updatedAt": "2026-11-20T07:00:58.720Z"
     },
     {
       "id": "projects/grafika/nightly-canyon.png",
@@ -1238,6 +1277,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/nightly-canyon.png",
       "legacyPath": "/grafika/nightly-canyon.png",
+      "thumbPath": "/_thumbs/projects/grafika/nightly-canyon.png.webp",
       "gitPath": "cdn/projects/grafika/nightly-canyon.png",
       "bytes": 1000326,
       "sizeFormatted": "976.9 KB",
@@ -1255,7 +1295,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.772Z"
+      "updatedAt": "2026-11-20T07:00:58.724Z"
     },
     {
       "id": "projects/grafika/ore-s-lights.png",
@@ -1267,6 +1307,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/ore-s-lights.png",
       "legacyPath": "/grafika/ore-s-lights.png",
+      "thumbPath": "/_thumbs/projects/grafika/ore-s-lights.png.webp",
       "gitPath": "cdn/projects/grafika/ore-s-lights.png",
       "bytes": 753870,
       "sizeFormatted": "736.2 KB",
@@ -1284,7 +1325,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.772Z"
+      "updatedAt": "2026-11-20T07:00:58.728Z"
     },
     {
       "id": "projects/grafika/outpost-from-afars.png",
@@ -1296,6 +1337,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/outpost-from-afars.png",
       "legacyPath": "/grafika/outpost-from-afars.png",
+      "thumbPath": "/_thumbs/projects/grafika/outpost-from-afars.png.webp",
       "gitPath": "cdn/projects/grafika/outpost-from-afars.png",
       "bytes": 1241294,
       "sizeFormatted": "1.18 MB",
@@ -1313,7 +1355,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.773Z"
+      "updatedAt": "2026-11-20T07:00:58.734Z"
     },
     {
       "id": "projects/grafika/phanes-of-the-ends.png",
@@ -1325,6 +1367,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/phanes-of-the-ends.png",
       "legacyPath": "/grafika/phanes-of-the-ends.png",
+      "thumbPath": "/_thumbs/projects/grafika/phanes-of-the-ends.png.webp",
       "gitPath": "cdn/projects/grafika/phanes-of-the-ends.png",
       "bytes": 772263,
       "sizeFormatted": "754.2 KB",
@@ -1342,7 +1385,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.775Z"
+      "updatedAt": "2026-11-20T07:00:58.738Z"
     },
     {
       "id": "projects/grafika/reservoir.png",
@@ -1354,6 +1397,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/reservoir.png",
       "legacyPath": "/grafika/reservoir.png",
+      "thumbPath": "/_thumbs/projects/grafika/reservoir.png.webp",
       "gitPath": "cdn/projects/grafika/reservoir.png",
       "bytes": 643132,
       "sizeFormatted": "628.1 KB",
@@ -1371,7 +1415,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.776Z"
+      "updatedAt": "2026-11-20T07:00:58.741Z"
     },
     {
       "id": "projects/grafika/rooms-of-points.png",
@@ -1383,6 +1427,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/rooms-of-points.png",
       "legacyPath": "/grafika/rooms-of-points.png",
+      "thumbPath": "/_thumbs/projects/grafika/rooms-of-points.png.webp",
       "gitPath": "cdn/projects/grafika/rooms-of-points.png",
       "bytes": 1134800,
       "sizeFormatted": "1.08 MB",
@@ -1400,7 +1445,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.777Z"
+      "updatedAt": "2026-11-20T07:00:58.747Z"
     },
     {
       "id": "projects/grafika/silence-in-echoes.png",
@@ -1412,6 +1457,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/silence-in-echoes.png",
       "legacyPath": "/grafika/silence-in-echoes.png",
+      "thumbPath": "/_thumbs/projects/grafika/silence-in-echoes.png.webp",
       "gitPath": "cdn/projects/grafika/silence-in-echoes.png",
       "bytes": 965694,
       "sizeFormatted": "943.1 KB",
@@ -1429,7 +1475,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.779Z"
+      "updatedAt": "2026-11-20T07:00:58.753Z"
     },
     {
       "id": "projects/grafika/snow-s-white.png",
@@ -1441,6 +1487,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/snow-s-white.png",
       "legacyPath": "/grafika/snow-s-white.png",
+      "thumbPath": "/_thumbs/projects/grafika/snow-s-white.png.webp",
       "gitPath": "cdn/projects/grafika/snow-s-white.png",
       "bytes": 1480897,
       "sizeFormatted": "1.41 MB",
@@ -1458,7 +1505,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.785Z"
+      "updatedAt": "2026-11-20T07:00:58.764Z"
     },
     {
       "id": "projects/grafika/stargazer.png",
@@ -1470,6 +1517,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/stargazer.png",
       "legacyPath": "/grafika/stargazer.png",
+      "thumbPath": "/_thumbs/projects/grafika/stargazer.png.webp",
       "gitPath": "cdn/projects/grafika/stargazer.png",
       "bytes": 482131,
       "sizeFormatted": "470.8 KB",
@@ -1487,7 +1535,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.785Z"
+      "updatedAt": "2026-11-20T07:00:58.766Z"
     },
     {
       "id": "projects/grafika/subtle-rainbow.png",
@@ -1499,6 +1547,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/subtle-rainbow.png",
       "legacyPath": "/grafika/subtle-rainbow.png",
+      "thumbPath": "/_thumbs/projects/grafika/subtle-rainbow.png.webp",
       "gitPath": "cdn/projects/grafika/subtle-rainbow.png",
       "bytes": 771185,
       "sizeFormatted": "753.1 KB",
@@ -1516,7 +1565,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.786Z"
+      "updatedAt": "2026-11-20T07:00:58.770Z"
     },
     {
       "id": "projects/grafika/sunrise-and-moonrise.png",
@@ -1528,6 +1577,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/sunrise-and-moonrise.png",
       "legacyPath": "/grafika/sunrise-and-moonrise.png",
+      "thumbPath": "/_thumbs/projects/grafika/sunrise-and-moonrise.png.webp",
       "gitPath": "cdn/projects/grafika/sunrise-and-moonrise.png",
       "bytes": 895414,
       "sizeFormatted": "874.4 KB",
@@ -1545,7 +1595,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.788Z"
+      "updatedAt": "2026-11-20T07:00:58.775Z"
     },
     {
       "id": "projects/grafika/tell-a-tale.png",
@@ -1557,6 +1607,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/tell-a-tale.png",
       "legacyPath": "/grafika/tell-a-tale.png",
+      "thumbPath": "/_thumbs/projects/grafika/tell-a-tale.png.webp",
       "gitPath": "cdn/projects/grafika/tell-a-tale.png",
       "bytes": 1100257,
       "sizeFormatted": "1.05 MB",
@@ -1574,7 +1625,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.790Z"
+      "updatedAt": "2026-11-20T07:00:58.781Z"
     },
     {
       "id": "projects/grafika/the-architect-s-gaze.png",
@@ -1586,6 +1637,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/the-architect-s-gaze.png",
       "legacyPath": "/grafika/the-architect-s-gaze.png",
+      "thumbPath": "/_thumbs/projects/grafika/the-architect-s-gaze.png.webp",
       "gitPath": "cdn/projects/grafika/the-architect-s-gaze.png",
       "bytes": 830307,
       "sizeFormatted": "810.8 KB",
@@ -1603,7 +1655,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.791Z"
+      "updatedAt": "2026-11-20T07:00:58.786Z"
     },
     {
       "id": "projects/grafika/the-village-s-life.png",
@@ -1615,6 +1667,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/the-village-s-life.png",
       "legacyPath": "/grafika/the-village-s-life.png",
+      "thumbPath": "/_thumbs/projects/grafika/the-village-s-life.png.webp",
       "gitPath": "cdn/projects/grafika/the-village-s-life.png",
       "bytes": 1265298,
       "sizeFormatted": "1.21 MB",
@@ -1632,7 +1685,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.792Z"
+      "updatedAt": "2026-11-20T07:00:58.792Z"
     },
     {
       "id": "projects/grafika/the-waits-of-eternity.png",
@@ -1644,6 +1697,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/the-waits-of-eternity.png",
       "legacyPath": "/grafika/the-waits-of-eternity.png",
+      "thumbPath": "/_thumbs/projects/grafika/the-waits-of-eternity.png.webp",
       "gitPath": "cdn/projects/grafika/the-waits-of-eternity.png",
       "bytes": 854687,
       "sizeFormatted": "834.7 KB",
@@ -1661,7 +1715,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.794Z"
+      "updatedAt": "2026-11-20T07:00:58.798Z"
     },
     {
       "id": "projects/grafika/underground-s-stars.png",
@@ -1673,6 +1727,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/underground-s-stars.png",
       "legacyPath": "/grafika/underground-s-stars.png",
+      "thumbPath": "/_thumbs/projects/grafika/underground-s-stars.png.webp",
       "gitPath": "cdn/projects/grafika/underground-s-stars.png",
       "bytes": 1887478,
       "sizeFormatted": "1.80 MB",
@@ -1690,7 +1745,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.796Z"
+      "updatedAt": "2026-11-20T07:00:58.806Z"
     },
     {
       "id": "projects/grafika/warmth-of-coral.png",
@@ -1702,6 +1757,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/warmth-of-coral.png",
       "legacyPath": "/grafika/warmth-of-coral.png",
+      "thumbPath": "/_thumbs/projects/grafika/warmth-of-coral.png.webp",
       "gitPath": "cdn/projects/grafika/warmth-of-coral.png",
       "bytes": 1078493,
       "sizeFormatted": "1.03 MB",
@@ -1719,7 +1775,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.798Z"
+      "updatedAt": "2026-11-20T07:00:58.812Z"
     },
     {
       "id": "projects/grafika/warped-in-lights.png",
@@ -1731,6 +1787,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/warped-in-lights.png",
       "legacyPath": "/grafika/warped-in-lights.png",
+      "thumbPath": "/_thumbs/projects/grafika/warped-in-lights.png.webp",
       "gitPath": "cdn/projects/grafika/warped-in-lights.png",
       "bytes": 1382921,
       "sizeFormatted": "1.32 MB",
@@ -1748,7 +1805,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.799Z"
+      "updatedAt": "2026-11-20T07:00:58.818Z"
     },
     {
       "id": "projects/grafika/wings-of-sea.png",
@@ -1760,6 +1817,7 @@
       "project": "grafika",
       "cdnPath": "/projects/grafika/wings-of-sea.png",
       "legacyPath": "/grafika/wings-of-sea.png",
+      "thumbPath": "/_thumbs/projects/grafika/wings-of-sea.png.webp",
       "gitPath": "cdn/projects/grafika/wings-of-sea.png",
       "bytes": 764883,
       "sizeFormatted": "747.0 KB",
@@ -1777,7 +1835,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.801Z"
+      "updatedAt": "2026-11-20T07:00:58.823Z"
     },
     {
       "id": "projects/prefect/demo-1.png",
@@ -1789,6 +1847,7 @@
       "project": "prefect",
       "cdnPath": "/projects/prefect/demo-1.png",
       "legacyPath": "/prefect/demo-1.png",
+      "thumbPath": "/_thumbs/projects/prefect/demo-1.png.webp",
       "gitPath": "cdn/projects/prefect/demo-1.png",
       "bytes": 1259976,
       "sizeFormatted": "1.20 MB",
@@ -1806,7 +1865,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.803Z"
+      "updatedAt": "2026-11-20T07:00:58.830Z"
     },
     {
       "id": "projects/prefect/demo-2.png",
@@ -1818,6 +1877,7 @@
       "project": "prefect",
       "cdnPath": "/projects/prefect/demo-2.png",
       "legacyPath": "/prefect/demo-2.png",
+      "thumbPath": "/_thumbs/projects/prefect/demo-2.png.webp",
       "gitPath": "cdn/projects/prefect/demo-2.png",
       "bytes": 482972,
       "sizeFormatted": "471.7 KB",
@@ -1835,7 +1895,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.805Z"
+      "updatedAt": "2026-11-20T07:00:58.834Z"
     },
     {
       "id": "projects/prefect/demo-3.png",
@@ -1847,6 +1907,7 @@
       "project": "prefect",
       "cdnPath": "/projects/prefect/demo-3.png",
       "legacyPath": "/prefect/demo-3.png",
+      "thumbPath": "/_thumbs/projects/prefect/demo-3.png.webp",
       "gitPath": "cdn/projects/prefect/demo-3.png",
       "bytes": 509319,
       "sizeFormatted": "497.4 KB",
@@ -1864,7 +1925,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.807Z"
+      "updatedAt": "2026-11-20T07:00:58.838Z"
     },
     {
       "id": "svg/handaru-grid-mark.svg",
@@ -1876,6 +1937,7 @@
       "project": null,
       "cdnPath": "/svg/handaru-grid-mark.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/svg/handaru-grid-mark.svg",
       "bytes": 556,
       "sizeFormatted": "556 B",
@@ -1893,7 +1955,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\">\n  <rect x=\"2\" y=\"2\" width=\"60\" height=\"60\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <path d=\"M22 2V62M42 2V62M2 22H62M2 42H62\" stroke=\"currentColor\" stroke-width=\"1\" stroke-opacity=\"0.35\"/>\n  <rect x=\"14\" y=\"14\" width=\"16\" height=\"16\" stroke=\"#FF5722\" stroke-width=\"2\"/>\n  <rect x=\"34\" y=\"34\" width=\"16\" height=\"16\" fill=\"#FF5722\"/>\n  <circle cx=\"42\" cy=\"22\" r=\"5\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <path d=\"M14 50L30 34\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.807Z"
+      "updatedAt": "2026-11-20T07:10:19.417Z"
     },
     {
       "id": "svg/hdn-badge.svg",
@@ -1905,6 +1967,7 @@
       "project": null,
       "cdnPath": "/svg/hdn-badge.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/svg/hdn-badge.svg",
       "bytes": 538,
       "sizeFormatted": "538 B",
@@ -1922,7 +1985,7 @@
       "usesCurrentColor": false,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 164 28\" fill=\"none\">\n  <rect x=\"0.5\" y=\"0.5\" width=\"163\" height=\"27\" fill=\"#09090B\" stroke=\"#27272A\"/>\n  <rect x=\"0.5\" y=\"0.5\" width=\"46\" height=\"27\" fill=\"#FF5722\"/>\n  <text x=\"23\" y=\"18\" text-anchor=\"middle\" fill=\"#09090B\" font-family=\"monospace\" font-size=\"11\" font-weight=\"700\">HDN</text>\n  <circle cx=\"59\" cy=\"14\" r=\"3\" fill=\"#10B981\"/>\n  <text x=\"69\" y=\"18\" fill=\"#F4F4F5\" font-family=\"monospace\" font-size=\"10\" font-weight=\"600\" letter-spacing=\"0.8\">CDN // ONLINE</text>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.809Z"
+      "updatedAt": "2026-11-20T07:10:17.780Z"
     },
     {
       "id": "svg/hdn-logo.svg",
@@ -1934,6 +1997,7 @@
       "project": null,
       "cdnPath": "/svg/hdn-logo.svg",
       "legacyPath": null,
+      "thumbPath": null,
       "gitPath": "cdn/svg/hdn-logo.svg",
       "bytes": 641,
       "sizeFormatted": "641 B",
@@ -1951,7 +2015,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 40\" fill=\"none\">\n  <rect x=\"1\" y=\"1\" width=\"38\" height=\"38\" stroke=\"#FF5722\" stroke-width=\"2\"/>\n  <path d=\"M10 11V29M10 20H20M20 11V29M25 11H30C31.6569 11 33 12.3431 33 14V26C33 27.6569 31.6569 29 30 29H25V11Z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"square\"/>\n  <rect x=\"48\" y=\"8\" width=\"4\" height=\"4\" fill=\"#FF5722\"/>\n  <path d=\"M58 10H64M58 20H72M58 29H84\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\"/>\n  <text x=\"58\" y=\"25\" fill=\"currentColor\" font-family=\"monospace\" font-size=\"11\" font-weight=\"700\" letter-spacing=\"2\">HDN.EDGE</text>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T08:27:42.809Z"
+      "updatedAt": "2026-11-20T07:10:15.756Z"
     }
   ]
 }

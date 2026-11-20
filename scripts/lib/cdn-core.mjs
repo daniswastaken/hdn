@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,6 +11,7 @@ const __dirname = path.dirname(__filename);
 export const REPO_ROOT = path.resolve(__dirname, '../..');
 export const CDN_DIR = path.join(REPO_ROOT, 'cdn');
 export const PUBLIC_DIR = path.join(REPO_ROOT, 'public');
+export const THUMB_CACHE_DIR = path.join(REPO_ROOT, '.astro', 'thumb-cache');
 export const SRC_DATA_DIR = path.join(REPO_ROOT, 'src', 'data');
 export const SRC_MANIFEST_PATH = path.join(SRC_DATA_DIR, 'manifest.json');
 export const GITATTRIBUTES_PATH = path.join(REPO_ROOT, '.gitattributes');
@@ -42,6 +44,7 @@ export const CANONICAL_DIRECTORIES = [
 const IGNORE_NAMES = new Set(['.gitkeep', '.DS_Store', 'Thumbs.db', 'desktop.ini']);
 
 const IMAGE_EXTS = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.ico', '.bmp']);
+const RASTER_THUMB_EXTS = new Set(['.png', '.jpg', '.jpeg', '.webp', '.avif', '.gif', '.bmp']);
 const FONT_EXTS = new Set(['.woff2', '.woff', '.ttf', '.otf', '.eot']);
 const SVG_EXTS = new Set(['.svg']);
 
@@ -596,6 +599,7 @@ export function buildManifestData() {
       project,
       cdnPath: `/${relFromCdn}`,
       legacyPath,
+      thumbPath: category === 'image' && RASTER_THUMB_EXTS.has(ext) ? `/_thumbs/${relFromCdn}.webp` : null,
       gitPath,
       bytes: stat.size,
       sizeFormatted: formatBytes(stat.size),
@@ -688,7 +692,26 @@ export function updateReadmeStats(manifest) {
   return false;
 }
 
-export function syncCdn({
+async function ensureThumbnail(srcAbs, destAbs, sha256) {
+  ensureDir(THUMB_CACHE_DIR);
+  ensureDir(path.dirname(destAbs));
+  const cachePath = path.join(THUMB_CACHE_DIR, `${sha256}.webp`);
+  if (!fs.existsSync(cachePath)) {
+    try {
+      await sharp(srcAbs)
+        .rotate()
+        .resize({ width: 360, height: 220, fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: 68, effort: 4 })
+        .toFile(cachePath);
+    } catch {
+      fs.copyFileSync(srcAbs, destAbs);
+      return;
+    }
+  }
+  fs.copyFileSync(cachePath, destAbs);
+}
+
+export async function syncCdn({
   syncPublic = true,
   normalize = false,
   autoLfs = false,
@@ -721,6 +744,9 @@ export function syncCdn({
         '/fonts/*',
         '  Cache-Control: public, max-age=31536000, immutable',
         '',
+        '/_thumbs/*',
+        '  Cache-Control: public, max-age=31536000, immutable',
+        '',
         '/projects/*',
         '  Cache-Control: public, max-age=604800, stale-while-revalidate=86400',
         '',
@@ -739,6 +765,7 @@ export function syncCdn({
       copyFileSafe(markSrc, path.join(PUBLIC_DIR, 'favicon.svg'));
     }
 
+    const thumbTasks = [];
     for (const asset of manifest.assets) {
       const srcAbs = path.join(CDN_DIR, asset.id);
       copyFileSafe(srcAbs, path.join(PUBLIC_DIR, asset.id));
@@ -746,6 +773,15 @@ export function syncCdn({
       if (asset.legacyPath) {
         copyFileSafe(srcAbs, path.join(PUBLIC_DIR, asset.legacyPath.slice(1)));
       }
+      if (asset.thumbPath) {
+        const destThumb = path.join(PUBLIC_DIR, asset.thumbPath.slice(1));
+        thumbTasks.push(() => ensureThumbnail(srcAbs, destThumb, asset.sha256));
+      }
+    }
+
+    const CONCURRENCY = 6;
+    for (let i = 0; i < thumbTasks.length; i += CONCURRENCY) {
+      await Promise.all(thumbTasks.slice(i, i + CONCURRENCY).map((run) => run()));
     }
 
     ensureDir(path.join(PUBLIC_DIR, 'api'));

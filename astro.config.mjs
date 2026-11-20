@@ -78,7 +78,7 @@ function hdnLocalStudioPlugin() {
               added.push(toPosix(path.relative(CDN_DIR, targetPath)));
             }
 
-            const syncResult = syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
+            const syncResult = await syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
             return sendJson(res, 200, {
               ok: true,
               added,
@@ -101,7 +101,7 @@ function hdnLocalStudioPlugin() {
             }
 
             fs.unlinkSync(targetPath);
-            const syncResult = syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
+            const syncResult = await syncCdn({ syncPublic: true, autoLfs: true, updateReadme: true });
             return sendJson(res, 200, {
               ok: true,
               removed: id,
