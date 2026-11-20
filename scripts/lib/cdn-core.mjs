@@ -733,6 +733,7 @@ export async function syncCdn({
     ensureDir(PUBLIC_DIR);
 
     fs.writeFileSync(path.join(PUBLIC_DIR, '.nojekyll'), '', 'utf8');
+    fs.writeFileSync(path.join(PUBLIC_DIR, 'CNAME'), 'cdn.handaru.dev\n', 'utf8');
     fs.writeFileSync(
       path.join(PUBLIC_DIR, '_headers'),
       [

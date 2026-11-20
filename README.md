@@ -8,7 +8,7 @@ A self-hosted, Git-backed Content Delivery Network (CDN) powered by **Astro 5**,
 
 | Endpoint | URL Pattern | Best For |
 | --- | --- | --- |
-| **Custom Edge (Planned)** | `https://cdn.handaru.dev/<path>` | Production apps & websites |
+| **Custom Edge (Live)** | `https://cdn.handaru.dev/<path>` | Production apps & websites |
 | **GitHub Pages** | `https://daniswastaken.github.io/hdn/<path>` | Direct web, font & LFS asset serving |
 | **jsDelivr CDN** | `https://cdn.jsdelivr.net/gh/daniswastaken/hdn@main/cdn/<path>` | Global edge caching & `@commit` pinning |
 | **GitHub Raw / Media** | `https://raw.githubusercontent.com/daniswastaken/hdn/main/cdn/<path>` | Direct raw fetch (`media.githubusercontent.com` for LFS) |
