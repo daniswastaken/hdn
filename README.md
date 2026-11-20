@@ -21,7 +21,7 @@ A self-hosted, Git-backed Content Delivery Network (CDN) powered by **Astro 5**,
 
 <!-- HDN:STATS:START -->
 
-> **Live Inventory**: **65 assets** · **37.4 MB** total payload · **0** Git LFS objects · Branch `main` (`c373914`)
+> **Live Inventory**: **65 assets** · **37.4 MB** total payload · **0** Git LFS objects · Branch `main` (`ebf09e9`)
 
 | Vault Directory | Assets | Payload | Canonical Edge Route |
 | --- | ---: | ---: | --- |
