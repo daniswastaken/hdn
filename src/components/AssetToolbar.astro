@@ -1,0 +1,134 @@
+---
+interface Props {
+  manifest: {
+    stats: {
+      totalAssets: number;
+      byCategory: Record<string, number>;
+    };
+  };
+}
+
+const { manifest } = Astro.props;
+const counts = manifest.stats.byCategory;
+---
+
+<section class="border-b hdn-border bg-[var(--hdn-surface)]">
+  <!-- Primary Filter & Search Row -->
+  <div class="flex flex-wrap items-center justify-between gap-2.5 px-4 py-2.5 border-b hdn-border">
+    <!-- Search -->
+    <div class="relative flex-1 min-w-[220px] max-w-md">
+      <svg
+        class="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-[var(--hdn-ink-subtle)] pointer-events-none"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="M15.5 15.5L21 21" />
+      </svg>
+      <input
+        id="search-input"
+        type="search"
+        placeholder="Filter assets, folders, hashes... (Press /)"
+        class="w-full pl-8 pr-16 py-1.5 border hdn-border bg-[var(--hdn-bg)] font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] placeholder:text-[var(--hdn-ink-subtle)] focus:outline-none focus:border-[var(--hdn-accent)]"
+      />
+      <span
+        id="match-counter"
+        class="absolute right-2.5 top-1/2 -translate-y-1/2 font-[var(--font-mono)] text-[10px] text-[var(--hdn-ink-subtle)] tabular-nums pointer-events-none"
+      >
+        {manifest.stats.totalAssets}/{manifest.stats.totalAssets}
+      </span>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap items-center gap-1" role="tablist" aria-label="Asset categories">
+      <button type="button" data-cat-filter="all" class="cat-btn active-cat px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+        All <span id="cat-count-all" class="opacity-70 tabular-nums">{manifest.stats.totalAssets}</span>
+      </button>
+      <button type="button" data-cat-filter="image" class="cat-btn px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+        Images <span id="cat-count-image" class="opacity-70 tabular-nums">{counts.image || 0}</span>
+      </button>
+      <button type="button" data-cat-filter="font" class="cat-btn px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+        Fonts <span id="cat-count-font" class="opacity-70 tabular-nums">{counts.font || 0}</span>
+      </button>
+      <button type="button" data-cat-filter="icon" class="cat-btn px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+        Icons <span id="cat-count-icon" class="opacity-70 tabular-nums">{counts.icon || 0}</span>
+      </button>
+      <button type="button" data-cat-filter="svg" class="cat-btn px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+        SVG <span id="cat-count-svg" class="opacity-70 tabular-nums">{counts.svg || 0}</span>
+      </button>
+      <button type="button" data-cat-filter="media" class="cat-btn px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+        Media/LFS <span id="cat-count-media" class="opacity-70 tabular-nums">{counts.media || 0}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Stage Controls & Font Specimen Bar -->
+  <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-2 bg-[var(--hdn-bg)]/60">
+    <!-- Left: Breadcrumb / Active filter reset -->
+    <div class="flex items-center gap-2 font-[var(--font-mono)] text-xs">
+      <span class="text-[var(--hdn-ink-subtle)]">SCOPE:</span>
+      <span id="active-scope-label" class="text-[var(--hdn-ink)] font-medium">cdn/**</span>
+      <button
+        id="reset-filters-btn"
+        type="button"
+        class="hidden px-1.5 py-0.5 border hdn-border text-[10px] text-[var(--hdn-accent)] hover:bg-[var(--hdn-elevated)] cursor-pointer"
+      >
+        RESET
+      </button>
+    </div>
+
+    <!-- Right: Surface, Fit, Sort, View -->
+    <div class="flex flex-wrap items-center gap-2">
+      <!-- Surface Mode -->
+      <div class="flex items-center border hdn-border hdn-surface" title="Preview canvas background">
+        <button type="button" data-surface="checker" class="surface-btn active-surface px-2 py-1 font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">CHK</button>
+        <button type="button" data-surface="dark" class="surface-btn px-2 py-1 border-l hdn-border font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">DRK</button>
+        <button type="button" data-surface="light" class="surface-btn px-2 py-1 border-l hdn-border font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">LGT</button>
+        <button type="button" data-surface="blueprint" class="surface-btn px-2 py-1 border-l hdn-border font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">BLU</button>
+      </div>
+
+      <!-- Sort -->
+      <select
+        id="sort-select"
+        aria-label="Sort assets"
+        class="border hdn-border hdn-surface px-2 py-1 font-[var(--font-mono)] text-[11px] text-[var(--hdn-ink)] focus:outline-none cursor-pointer"
+      >
+        <option value="name-asc">Name A–Z</option>
+        <option value="size-desc">Size (Largest)</option>
+        <option value="size-asc">Size (Smallest)</option>
+        <option value="recent">Recently Modified</option>
+      </select>
+
+      <!-- View Switch -->
+      <div class="flex items-center border hdn-border hdn-surface">
+        <button type="button" data-view-mode="grid" class="view-btn active-view px-2.5 py-1 font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+          Grid
+        </button>
+        <button type="button" data-view-mode="table" class="view-btn px-2.5 py-1 border-l hdn-border font-[var(--font-mono)] text-[11px] uppercase cursor-pointer">
+          Table
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Font Specimen Tester (shown when Fonts filter active) -->
+  <div id="font-tester-bar" class="hidden border-t hdn-border px-4 py-2.5 bg-[var(--hdn-surface)] flex-wrap items-center gap-3">
+    <span class="font-[var(--font-mono)] text-[10px] uppercase tracking-wider text-[var(--hdn-accent)] font-bold">
+      FONT TESTER
+    </span>
+    <input
+      id="font-specimen-input"
+      type="text"
+      value="Handaru Delivery Network — 0123456789 AaBbCcZz"
+      aria-label="Live font specimen preview text"
+      class="flex-1 min-w-[220px] px-2.5 py-1 border hdn-border bg-[var(--hdn-bg)] font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] focus:outline-none focus:border-[var(--hdn-accent)]"
+    />
+    <label class="flex items-center gap-2 font-[var(--font-mono)] text-[11px] text-[var(--hdn-ink-muted)]">
+      <span>SIZE</span>
+      <input id="font-size-slider" type="range" min="14" max="56" value="26" class="accent-[var(--hdn-accent)] cursor-pointer" />
+      <span id="font-size-readout" class="w-9 text-right tabular-nums text-[var(--hdn-ink)]">26px</span>
+    </label>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+---
+interface Props {
+  manifest: {
+    repo: {
+      owner: string;
+      name: string;
+      branch: string;
+      shortCommit: string;
+      lfsAvailable: boolean;
+    };
+    stats: {
+      totalAssets: number;
+      totalSizeFormatted: string;
+      totalLfsAssets: number;
+    };
+  };
+}
+
+const { manifest } = Astro.props;
+---
+
+<header class="sticky top-0 z-30 border-b hdn-border bg-[var(--hdn-bg)]/95 backdrop-blur-sm">
+  <div class="flex flex-wrap items-center justify-between gap-3 px-4 py-2.5 lg:px-5">
+    <!-- Brand & Telemetry -->
+    <div class="flex items-center gap-3 min-w-0">
+      <button
+        id="mobile-nav-toggle"
+        type="button"
+        aria-label="Toggle directory sidebar"
+        class="inline-flex lg:hidden items-center justify-center w-8 h-8 border hdn-border hdn-surface text-[var(--hdn-ink)] hover:border-[var(--hdn-border-strong)] cursor-pointer"
+      >
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+
+      <a href="./" class="flex items-center gap-2.5 no-underline text-[var(--hdn-ink)]">
+        <span class="inline-flex items-center justify-center w-8 h-8 border border-[var(--hdn-accent)] bg-[var(--hdn-accent)]/10">
+          <svg class="w-5 h-5" viewBox="0 0 64 64" fill="none">
+            <rect x="6" y="6" width="52" height="52" stroke="currentColor" stroke-width="2" />
+            <rect x="16" y="16" width="14" height="14" stroke="#FF5722" stroke-width="3" />
+            <rect x="34" y="34" width="14" height="14" fill="#FF5722" />
+          </svg>
+        </span>
+        <span class="flex flex-col leading-none">
+          <span class="font-[var(--font-display)] text-sm font-bold tracking-tight uppercase">
+            HDN <span class="text-[var(--hdn-ink-subtle)]">//</span> EDGE REGISTRY
+          </span>
+          <span class="font-[var(--font-mono)] text-[10px] text-[var(--hdn-ink-muted)] mt-1 flex items-center gap-2">
+            <span id="studio-status-dot" class="inline-flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 bg-[var(--hdn-ok)] inline-block"></span>
+              <span id="studio-status-label">GITHUB STATIC EDGE</span>
+            </span>
+            <span class="text-[var(--hdn-border-strong)]">|</span>
+            <span id="header-telemetry" class="tabular-nums">
+              {manifest.stats.totalAssets} ASSETS · {manifest.stats.totalSizeFormatted} · {manifest.stats.totalLfsAssets} LFS
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Global Endpoint Switcher & Actions -->
+    <div class="flex flex-wrap items-center gap-2">
+      <div class="flex items-center border hdn-border hdn-surface" role="group" aria-label="CDN Endpoint">
+        <span class="hidden sm:inline-block px-2 py-1.5 font-[var(--font-mono)] text-[10px] uppercase tracking-wider text-[var(--hdn-ink-subtle)] border-r hdn-border">
+          ORIGIN
+        </span>
+        <select
+          id="endpoint-select"
+          aria-label="Select active CDN delivery endpoint"
+          class="bg-transparent px-2.5 py-1.5 font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] focus:outline-none cursor-pointer"
+        >
+          <option value="custom" class="bg-[var(--hdn-surface)] text-[var(--hdn-ink)]">cdn.handaru.dev</option>
+          <option value="pages" class="bg-[var(--hdn-surface)] text-[var(--hdn-ink)]">daniswastaken.github.io/hdn</option>
+          <option value="jsdelivr" class="bg-[var(--hdn-surface)] text-[var(--hdn-ink)]">cdn.jsdelivr.net/gh/...</option>
+          <option value="raw" class="bg-[var(--hdn-surface)] text-[var(--hdn-ink)]">raw.githubusercontent.com</option>
+        </select>
+        <button
+          id="pin-ref-btn"
+          type="button"
+          title="Toggle rolling @main vs immutable @commit-sha"
+          class="px-2.5 py-1.5 border-l hdn-border font-[var(--font-mono)] text-xs text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] hover:bg-[var(--hdn-elevated)] transition-colors cursor-pointer tabular-nums"
+        >
+          @{manifest.repo.branch}
+        </button>
+      </div>
+
+      <button
+        id="open-upload-btn"
+        type="button"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--hdn-accent)] text-[var(--hdn-accent-ink)] font-[var(--font-mono)] text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer"
+      >
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 15V3m0 0L7 8m5-5l5 5M4 17v3h16v-3" />
+        </svg>
+        <span>Upload / Manage</span>
+      </button>
+
+      <a
+        href="./api/manifest.json"
+        target="_blank"
+        rel="noopener"
+        class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1.5 border hdn-border hdn-surface font-[var(--font-mono)] text-xs text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] hover:border-[var(--hdn-border-strong)] no-underline"
+        title="Inspect generated JSON API manifest"
+      >
+        <span>API</span>
+        <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 17L17 7M17 7H8M17 7V16" />
+        </svg>
+      </a>
+
+      <button
+        id="theme-toggle-btn"
+        type="button"
+        aria-label="Toggle color theme"
+        title="Toggle dark/light industrial paper mode"
+        class="inline-flex items-center justify-center w-8 h-8 border hdn-border hdn-surface text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] hover:border-[var(--hdn-border-strong)] cursor-pointer font-[var(--font-mono)] text-xs"
+      >
+        <span id="theme-toggle-label">◐</span>
+      </button>
+    </div>
+  </div>
+</header>

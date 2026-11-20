@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <rect x="1" y="1" width="38" height="38" stroke="#FF5722" stroke-width="2"/>
+  <path d="M10 11V29M10 20H20M20 11V29M25 11H30C31.6569 11 33 12.3431 33 14V26C33 27.6569 31.6569 29 30 29H25V11Z" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+  <rect x="48" y="8" width="4" height="4" fill="#FF5722"/>
+  <path d="M58 10H64M58 20H72M58 29H84" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"/>
+  <text x="58" y="25" fill="currentColor" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">HDN.EDGE</text>
+</svg>

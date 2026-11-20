@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SystemBar from '../components/SystemBar.astro';
+import SidebarNav from '../components/SidebarNav.astro';
+import AssetToolbar from '../components/AssetToolbar.astro';
+import InspectorDrawer from '../components/InspectorDrawer.astro';
+import UploadModal from '../components/UploadModal.astro';
+import manifest from '../data/manifest.json';
+import '../styles/global.css';
+---
+
+<BaseLayout>
+  <div class="min-h-screen flex flex-col">
+    <SystemBar manifest={manifest} />
+
+    <div class="flex flex-1 min-h-0">
+      <SidebarNav manifest={manifest} />
+
+      <main class="flex-1 min-w-0 flex flex-col">
+        <AssetToolbar manifest={manifest} />
+        <div id="asset-stage" class="flex-1"></div>
+      </main>
+    </div>
+  </div>
+
+  <InspectorDrawer manifest={manifest} />
+  <UploadModal manifest={manifest} />
+
+  <!-- Clipboard & Status Toast -->
+  <div
+    id="hdn-toast"
+    role="status"
+    aria-live="polite"
+    class="hidden fixed bottom-4 right-4 z-[60] max-w-md px-3.5 py-2 border bg-[var(--hdn-surface)] font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] shadow-lg"
+  >
+    <span id="hdn-toast-text">COPIED</span>
+  </div>
+
+  <script id="hdn-manifest" type="application/json" set:html={JSON.stringify(manifest)}></script>
+  <script src="../scripts/cdn-app.ts"></script>
+</BaseLayout>

@@ -1,0 +1,131 @@
+---
+interface DirectoryStat {
+  path: string;
+  count: number;
+  bytes: number;
+  sizeFormatted: string;
+}
+
+interface Props {
+  manifest: {
+    repo: {
+      owner: string;
+      name: string;
+      branch: string;
+      shortCommit: string;
+      lfsAvailable: boolean;
+    };
+    stats: {
+      totalAssets: number;
+      totalSizeFormatted: string;
+      totalLfsAssets: number;
+      directories: DirectoryStat[];
+    };
+  };
+}
+
+const { manifest } = Astro.props;
+const projectDirs = manifest.stats.directories.filter((d) => d.path.startsWith('projects/'));
+const vaultDirs = manifest.stats.directories.filter((d) => !d.path.startsWith('projects/'));
+---
+
+<aside
+  id="sidebar-nav"
+  class="fixed inset-y-0 left-0 z-40 w-64 -translate-x-full lg:translate-x-0 lg:static lg:z-auto shrink-0 border-r hdn-border bg-[var(--hdn-bg)] transition-transform duration-150 flex flex-col justify-between overflow-y-auto"
+>
+  <div class="p-3.5 space-y-5">
+    <div class="flex items-center justify-between lg:hidden pb-2 border-b hdn-border">
+      <span class="font-[var(--font-mono)] text-xs font-bold uppercase tracking-wider">Directory Tree</span>
+      <button id="mobile-nav-close" type="button" class="px-2 py-1 border hdn-border font-[var(--font-mono)] text-xs cursor-pointer">
+        ESC
+      </button>
+    </div>
+
+    <!-- Root -->
+    <div>
+      <div class="font-[var(--font-mono)] text-[10px] uppercase tracking-widest text-[var(--hdn-ink-subtle)] px-2 mb-1.5">
+        Vault Root
+      </div>
+      <button
+        type="button"
+        data-dir-filter="all"
+        class="dir-btn active-dir w-full flex items-center justify-between px-2.5 py-1.5 text-left font-[var(--font-mono)] text-xs border border-transparent cursor-pointer"
+      >
+        <span class="flex items-center gap-2 truncate">
+          <span class="text-[var(--hdn-accent)]">./</span>
+          <span>cdn/**</span>
+        </span>
+        <span id="dir-count-all" class="text-[11px] text-[var(--hdn-ink-muted)] tabular-nums">{manifest.stats.totalAssets}</span>
+      </button>
+    </div>
+
+    <!-- Projects -->
+    <div>
+      <div class="font-[var(--font-mono)] text-[10px] uppercase tracking-widest text-[var(--hdn-ink-subtle)] px-2 mb-1.5">
+        Projects
+      </div>
+      <div id="dir-list-projects" class="space-y-0.5">
+        {projectDirs.map((dir) => (
+          <button
+            type="button"
+            data-dir-filter={dir.path}
+            class="dir-btn w-full flex items-center justify-between px-2.5 py-1.5 text-left font-[var(--font-mono)] text-xs border border-transparent hover:bg-[var(--hdn-surface)] cursor-pointer"
+          >
+            <span class="truncate text-[var(--hdn-ink)]">{dir.path.replace('projects/', '')}/</span>
+            <span class="text-[11px] text-[var(--hdn-ink-muted)] tabular-nums">
+              {dir.count} <span class="text-[var(--hdn-ink-subtle)]">· {dir.sizeFormatted}</span>
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Asset Buckets -->
+    <div>
+      <div class="font-[var(--font-mono)] text-[10px] uppercase tracking-widest text-[var(--hdn-ink-subtle)] px-2 mb-1.5">
+        Asset Vaults
+      </div>
+      <div id="dir-list-vaults" class="space-y-0.5">
+        {vaultDirs.map((dir) => (
+          <button
+            type="button"
+            data-dir-filter={dir.path}
+            class="dir-btn w-full flex items-center justify-between px-2.5 py-1.5 text-left font-[var(--font-mono)] text-xs border border-transparent hover:bg-[var(--hdn-surface)] cursor-pointer"
+          >
+            <span class="flex items-center gap-1.5 truncate text-[var(--hdn-ink)]">
+              <span>{dir.path}/</span>
+              {dir.path === 'lfs' && (
+                <span class="px-1 py-0.2 bg-[var(--hdn-accent)]/15 text-[var(--hdn-accent)] text-[9px] font-bold">LFS</span>
+              )}
+            </span>
+            <span class="text-[11px] text-[var(--hdn-ink-muted)] tabular-nums">
+              {dir.count}
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Diagnostics -->
+  <div class="p-3.5 border-t hdn-border space-y-2.5 bg-[var(--hdn-surface)]/50">
+    <div class="flex items-center justify-between font-[var(--font-mono)] text-[11px]">
+      <span class="text-[var(--hdn-ink-subtle)]">GIT LFS ENGINE</span>
+      <span class="text-[var(--hdn-ok)] font-semibold">ACTIVE</span>
+    </div>
+    <p class="font-[var(--font-mono)] text-[10px] leading-relaxed text-[var(--hdn-ink-muted)] m-0">
+      Files ≥ 10 MB or inside <code class="text-[var(--hdn-ink)]">cdn/lfs/</code> are auto-tracked in <code class="text-[var(--hdn-ink)]">.gitattributes</code>.
+    </p>
+    <div class="pt-1 border-t hdn-border flex items-center justify-between font-[var(--font-mono)] text-[10px] text-[var(--hdn-ink-subtle)]">
+      <span>HEAD @{manifest.repo.shortCommit}</span>
+      <a
+        href={`https://github.com/${manifest.repo.owner}/${manifest.repo.name}`}
+        target="_blank"
+        rel="noopener"
+        class="text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] underline"
+      >
+        GitHub Repo
+      </a>
+    </div>
+  </div>
+</aside>

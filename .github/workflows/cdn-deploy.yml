@@ -1,0 +1,104 @@
+name: HDN CDN Build & Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    # Weekly manifest & stats integrity refresh
+    - cron: '0 3 * * 1'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  sync-and-build:
+    name: Normalize Vault, Sync Manifest & Build CDN
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository with Git LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile || pnpm install
+
+      - name: Normalize vault filenames, auto-track LFS >= 10MB & update README
+        run: pnpm hdn sync --normalize --auto-lfs --readme
+
+      - name: Commit auto-normalized assets or manifest updates (if any)
+        run: |
+          git config user.name "hdn-bot[bot]"
+          git config user.email "hdn-bot@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add cdn .gitattributes src/data/manifest.json README.md
+            git commit -m "chore(cdn): auto-sync vault manifest, LFS rules & inventory [skip ci]" || true
+            git push origin HEAD:main || true
+          fi
+
+      - name: Validate CDN vault health
+        run: pnpm hdn doctor --strict
+
+      - name: Build Astro CDN Registry & static endpoints
+        run: pnpm build
+
+      - name: Write GitHub Actions Summary
+        run: |
+          node -e '
+            const fs = require("fs");
+            const m = JSON.parse(fs.readFileSync("src/data/manifest.json", "utf8"));
+            const s = m.stats;
+            const lines = [
+              "## HDN CDN Build Summary",
+              "",
+              `- **Total Assets**: ${s.totalAssets}`,
+              `- **Total Payload**: ${s.totalSizeFormatted}`,
+              `- **Git LFS Objects**: ${s.totalLfsAssets}`,
+              `- **Commit**: \`${m.repo.shortCommit}\``,
+              "",
+              "| Directory | Assets | Size |",
+              "| --- | ---: | ---: |",
+              ...s.directories.map(d => `| \`cdn/${d.path}/\` | ${d.count} | ${d.sizeFormatted} |`)
+            ];
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
+          '
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: sync-and-build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

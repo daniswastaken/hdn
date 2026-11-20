@@ -1,0 +1,146 @@
+<div id="inspector-backdrop" class="hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-[1px]"></div>
+
+<aside
+  id="inspector-drawer"
+  aria-label="Asset Inspector"
+  class="fixed inset-y-0 right-0 z-50 w-full max-w-[540px] translate-x-full transition-transform duration-150 border-l hdn-border bg-[var(--hdn-bg)] flex flex-col overflow-hidden"
+>
+  <!-- Top Bar -->
+  <div class="flex items-center justify-between gap-2 px-4 py-3 border-b hdn-border bg-[var(--hdn-surface)]">
+    <div class="min-w-0">
+      <div class="flex items-center gap-2">
+        <span id="insp-cat-badge" class="px-1.5 py-0.5 border hdn-border font-[var(--font-mono)] text-[10px] uppercase text-[var(--hdn-accent)]">
+          IMAGE
+        </span>
+        <span id="insp-lfs-badge" class="px-1.5 py-0.5 border hdn-border font-[var(--font-mono)] text-[10px] uppercase">
+          GIT
+        </span>
+        <span id="insp-size-badge" class="font-[var(--font-mono)] text-[11px] text-[var(--hdn-ink-muted)] tabular-nums">
+          0 KB
+        </span>
+      </div>
+      <h2 id="insp-title" class="font-[var(--font-mono)] text-sm font-bold text-[var(--hdn-ink)] truncate mt-1 mb-0">
+        asset.png
+      </h2>
+    </div>
+
+    <button
+      id="insp-close-btn"
+      type="button"
+      class="px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-xs text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] cursor-pointer"
+    >
+      ESC ×
+    </button>
+  </div>
+
+  <!-- Scrollable Content -->
+  <div class="flex-1 overflow-y-auto p-4 space-y-5">
+    <!-- Live Preview Stage -->
+    <div class="border hdn-border">
+      <div class="flex items-center justify-between px-3 py-1.5 border-b hdn-border bg-[var(--hdn-surface)] font-[var(--font-mono)] text-[10px] uppercase text-[var(--hdn-ink-subtle)]">
+        <span id="insp-stage-label">LIVE PREVIEW</span>
+        <div id="insp-svg-tints" class="hidden items-center gap-1">
+          <span>TINT:</span>
+          <button type="button" data-tint="current" class="w-4 h-4 border hdn-border text-[9px] leading-none cursor-pointer" title="Default">A</button>
+          <button type="button" data-tint="#f4f4f5" class="w-4 h-4 border hdn-border bg-[#f4f4f5] cursor-pointer" title="White"></button>
+          <button type="button" data-tint="#09090b" class="w-4 h-4 border hdn-border bg-[#09090b] cursor-pointer" title="Black"></button>
+          <button type="button" data-tint="#ff5722" class="w-4 h-4 border hdn-border bg-[#ff5722] cursor-pointer" title="Orange"></button>
+          <button type="button" data-tint="#10b981" class="w-4 h-4 border hdn-border bg-[#10b981] cursor-pointer" title="Emerald"></button>
+        </div>
+      </div>
+      <div id="insp-stage" class="stage-checker min-h-[210px] max-h-[340px] flex items-center justify-center p-4 overflow-auto">
+        <!-- Rendered dynamically by cdn-app.ts -->
+      </div>
+    </div>
+
+    <!-- Delivery URL Matrix -->
+    <div>
+      <div class="font-[var(--font-mono)] text-[10px] uppercase tracking-widest text-[var(--hdn-ink-subtle)] mb-2">
+        Delivery Endpoints (1-Click Copy)
+      </div>
+      <div id="insp-url-matrix" class="border hdn-border divide-y divide-[var(--hdn-border)] bg-[var(--hdn-surface)]">
+        <!-- Populated by cdn-app.ts -->
+      </div>
+    </div>
+
+    <!-- Integration Snippets -->
+    <div>
+      <div class="flex items-center justify-between mb-2">
+        <span class="font-[var(--font-mono)] text-[10px] uppercase tracking-widest text-[var(--hdn-ink-subtle)]">
+          Integration Snippet
+        </span>
+        <div id="insp-snippet-tabs" class="flex items-center border hdn-border bg-[var(--hdn-surface)]">
+          <button type="button" data-snip="html" class="snip-tab px-2 py-0.5 font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">HTML</button>
+          <button type="button" data-snip="css" class="snip-tab px-2 py-0.5 border-l hdn-border font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">CSS</button>
+          <button type="button" data-snip="md" class="snip-tab px-2 py-0.5 border-l hdn-border font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">MD</button>
+          <button type="button" data-snip="fetch" class="snip-tab px-2 py-0.5 border-l hdn-border font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">JS</button>
+          <button type="button" data-snip="curl" class="snip-tab px-2 py-0.5 border-l hdn-border font-[var(--font-mono)] text-[10px] uppercase cursor-pointer">cURL</button>
+        </div>
+      </div>
+      <div class="relative border hdn-border bg-[var(--hdn-surface)]">
+        <pre id="insp-snippet-code" class="m-0 p-3 pr-16 font-[var(--font-mono)] text-[11px] leading-relaxed text-[var(--hdn-ink)] overflow-x-auto whitespace-pre-wrap break-all"></pre>
+        <button
+          id="insp-copy-snippet-btn"
+          type="button"
+          class="absolute top-2 right-2 px-2 py-1 border hdn-border bg-[var(--hdn-bg)] font-[var(--font-mono)] text-[10px] uppercase hover:border-[var(--hdn-accent)] cursor-pointer"
+        >
+          COPY
+        </button>
+      </div>
+    </div>
+
+    <!-- Spec Metadata Table -->
+    <div>
+      <div class="font-[var(--font-mono)] text-[10px] uppercase tracking-widest text-[var(--hdn-ink-subtle)] mb-2">
+        Object Specification
+      </div>
+      <dl id="insp-specs" class="m-0 border hdn-border divide-y divide-[var(--hdn-border)] bg-[var(--hdn-surface)] font-[var(--font-mono)] text-xs">
+        <!-- Populated by cdn-app.ts -->
+      </dl>
+    </div>
+
+    <!-- Vault Removal / GitHub Actions -->
+    <div class="border hdn-border p-3 bg-[var(--hdn-surface)] space-y-2.5">
+      <div class="flex items-center justify-between">
+        <span class="font-[var(--font-mono)] text-[10px] uppercase tracking-widest text-[var(--hdn-ink-subtle)]">
+          Asset Management
+        </span>
+        <a
+          id="insp-download-link"
+          href="#"
+          download
+          class="font-[var(--font-mono)] text-[11px] text-[var(--hdn-ink)] hover:text-[var(--hdn-accent)] underline"
+        >
+          Download Raw File
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        <button
+          id="insp-local-delete-btn"
+          type="button"
+          class="hidden px-3 py-1.5 border border-[var(--hdn-danger)] text-[var(--hdn-danger)] hover:bg-[var(--hdn-danger)] hover:text-white font-[var(--font-mono)] text-xs uppercase cursor-pointer transition-colors"
+        >
+          Delete From Disk
+        </button>
+        <a
+          id="insp-github-delete-link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="px-3 py-1.5 border hdn-border font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] hover:border-[var(--hdn-border-strong)] no-underline"
+        >
+          Delete on GitHub ↗
+        </a>
+        <button
+          id="insp-copy-rm-cmd"
+          type="button"
+          class="px-3 py-1.5 border hdn-border font-[var(--font-mono)] text-xs text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] cursor-pointer"
+        >
+          Copy CLI Remove Cmd
+        </button>
+      </div>
+      <p id="insp-delete-feedback" class="hidden m-0 font-[var(--font-mono)] text-[11px]"></p>
+    </div>
+  </div>
+</aside>

@@ -1,0 +1,175 @@
+---
+interface Props {
+  manifest: {
+    repo: {
+      owner: string;
+      name: string;
+      branch: string;
+    };
+    stats: {
+      directories: Array<{ path: string }>;
+    };
+  };
+}
+
+const { manifest } = Astro.props;
+---
+
+<div id="upload-modal-backdrop" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-[1px] flex items-center justify-center p-4">
+  <div
+    id="upload-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="upload-modal-title"
+    class="w-full max-w-2xl border hdn-border bg-[var(--hdn-bg)] max-h-[90vh] flex flex-col overflow-hidden"
+  >
+    <!-- Header -->
+    <div class="flex items-center justify-between px-4 py-3 border-b hdn-border bg-[var(--hdn-surface)]">
+      <div>
+        <h2 id="upload-modal-title" class="m-0 font-[var(--font-display)] text-sm font-bold uppercase tracking-wide">
+          HDN Upload & Vault Operations
+        </h2>
+        <p id="upload-mode-subtitle" class="m-0 mt-0.5 font-[var(--font-mono)] text-[11px] text-[var(--hdn-ink-muted)]">
+          Select target vault folder and drop files or copy CLI commands.
+        </p>
+      </div>
+      <button
+        id="upload-modal-close"
+        type="button"
+        class="px-2.5 py-1 border hdn-border font-[var(--font-mono)] text-xs text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] cursor-pointer"
+      >
+        ESC ×
+      </button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex border-b hdn-border bg-[var(--hdn-surface)] font-[var(--font-mono)] text-xs">
+      <button type="button" data-modal-tab="upload" class="modal-tab active-modal-tab px-4 py-2 border-r hdn-border cursor-pointer">
+        1. Upload Files
+      </button>
+      <button type="button" data-modal-tab="cli" class="modal-tab px-4 py-2 border-r hdn-border cursor-pointer">
+        2. CLI & Git LFS Workflows
+      </button>
+    </div>
+
+    <!-- Body -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+      <!-- Tab 1: Upload -->
+      <div id="modal-panel-upload" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <label class="block space-y-1">
+            <span class="font-[var(--font-mono)] text-[10px] uppercase tracking-wider text-[var(--hdn-ink-subtle)]">
+              Target Vault Folder
+            </span>
+            <select
+              id="upload-folder-select"
+              class="w-full px-2.5 py-2 border hdn-border hdn-surface font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] focus:outline-none focus:border-[var(--hdn-accent)]"
+            >
+              {manifest.stats.directories.map((dir) => (
+                <option value={dir.path}>cdn/{dir.path}/</option>
+              ))}
+              <option value="__custom__">+ Custom folder (e.g. projects/myapp)</option>
+            </select>
+          </label>
+
+          <label id="upload-custom-folder-wrap" class="hidden space-y-1">
+            <span class="font-[var(--font-mono)] text-[10px] uppercase tracking-wider text-[var(--hdn-ink-subtle)]">
+              Custom Path Under cdn/
+            </span>
+            <input
+              id="upload-custom-folder-input"
+              type="text"
+              placeholder="projects/new-app"
+              class="w-full px-2.5 py-2 border hdn-border hdn-surface font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] focus:outline-none focus:border-[var(--hdn-accent)]"
+            />
+          </label>
+        </div>
+
+        <!-- Dropzone -->
+        <label
+          id="upload-dropzone"
+          class="flex flex-col items-center justify-center gap-2 p-6 border border-dashed border-[var(--hdn-border-strong)] bg-[var(--hdn-surface)] hover:border-[var(--hdn-accent)] transition-colors cursor-pointer text-center"
+        >
+          <input id="upload-file-input" type="file" multiple class="sr-only" />
+          <svg class="w-6 h-6 text-[var(--hdn-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M12 15V3m0 0L7 8m5-5l5 5M4 17v3h16v-3" />
+          </svg>
+          <div class="font-[var(--font-mono)] text-xs text-[var(--hdn-ink)]">
+            Drop images, .woff2 fonts, .svg icons, or archives here (or click to browse)
+          </div>
+          <div class="font-[var(--font-mono)] text-[10px] text-[var(--hdn-ink-muted)]">
+            Filenames auto-normalize to kebab-case · Files ≥ 10 MB auto-register with Git LFS
+          </div>
+        </label>
+
+        <!-- Selected Queue -->
+        <div id="upload-queue-wrap" class="hidden border hdn-border bg-[var(--hdn-surface)]">
+          <div class="px-3 py-1.5 border-b hdn-border font-[var(--font-mono)] text-[10px] uppercase text-[var(--hdn-ink-subtle)] flex justify-between">
+            <span>Staged Files</span>
+            <button id="upload-clear-btn" type="button" class="text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] cursor-pointer">CLEAR</button>
+          </div>
+          <ul id="upload-queue-list" class="m-0 p-0 list-none divide-y divide-[var(--hdn-border)] font-[var(--font-mono)] text-xs max-h-40 overflow-y-auto"></ul>
+        </div>
+
+        <!-- Action Footer -->
+        <div class="border hdn-border p-3 bg-[var(--hdn-surface)] space-y-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <button
+              id="upload-local-submit-btn"
+              type="button"
+              disabled
+              class="hidden px-3.5 py-2 bg-[var(--hdn-accent)] text-[var(--hdn-accent-ink)] font-[var(--font-mono)] text-xs font-bold uppercase disabled:opacity-40 cursor-pointer disabled:cursor-not-allowed"
+            >
+              Write Directly to cdn/ Vault
+            </button>
+
+            <a
+              id="upload-github-web-link"
+              href={`https://github.com/${manifest.repo.owner}/${manifest.repo.name}/upload/${manifest.repo.branch}/cdn/images`}
+              target="_blank"
+              rel="noopener"
+              class="px-3.5 py-2 border hdn-border bg-[var(--hdn-bg)] font-[var(--font-mono)] text-xs text-[var(--hdn-ink)] hover:border-[var(--hdn-accent)] no-underline"
+            >
+              Upload via GitHub Web UI ↗
+            </a>
+
+            <button
+              id="upload-copy-cli-btn"
+              type="button"
+              class="px-3.5 py-2 border hdn-border font-[var(--font-mono)] text-xs text-[var(--hdn-ink-muted)] hover:text-[var(--hdn-ink)] cursor-pointer"
+            >
+              Copy `pnpm hdn add` Cmd
+            </button>
+          </div>
+
+          <pre id="upload-cli-preview" class="m-0 p-2.5 border hdn-border bg-[var(--hdn-bg)] font-[var(--font-mono)] text-[11px] text-[var(--hdn-ink-muted)] overflow-x-auto">pnpm hdn add ./file.png --to projects/grafika --commit --push</pre>
+          <p id="upload-status-msg" class="hidden m-0 font-[var(--font-mono)] text-xs"></p>
+        </div>
+      </div>
+
+      <!-- Tab 2: CLI & Git LFS -->
+      <div id="modal-panel-cli" class="hidden space-y-3 font-[var(--font-mono)] text-xs">
+        <div class="border hdn-border p-3 bg-[var(--hdn-surface)] space-y-2">
+          <div class="text-[10px] uppercase tracking-wider text-[var(--hdn-accent)] font-bold">Fast Upload & Removal</div>
+          <pre class="m-0 p-2.5 bg-[var(--hdn-bg)] border hdn-border text-[11px] overflow-x-auto leading-relaxed"># Add assets to a project or vault bucket (auto kebab-case + auto LFS)
+pnpm hdn add ./hero-banner.png --project grafika --commit --push
+pnpm hdn add ./inter-700.woff2 --to fonts --commit --push
+pnpm hdn add ./installer.zip --lfs --commit --push
+
+# Remove assets cleanly (also updates manifest, API & README)
+pnpm hdn remove grafika/old-shot.png --commit --push
+
+# Normalize manually added files & rebuild manifest
+pnpm hdn sync --normalize --auto-lfs --readme</pre>
+        </div>
+
+        <div class="border hdn-border p-3 bg-[var(--hdn-surface)] space-y-2">
+          <div class="text-[10px] uppercase tracking-wider text-[var(--hdn-ok)] font-bold">Git LFS Protection Policy</div>
+          <p class="m-0 text-[11px] text-[var(--hdn-ink-muted)] leading-relaxed">
+            Any file inside <code>cdn/lfs/</code>, heavy media/archive extensions, or individual files <code>≥ 10 MB</code> are tracked by Git LFS automatically. Standard web images, fonts, and SVGs stay regular Git objects so jsDelivr, GitHub Pages, and custom domains cache them with zero pointer friction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

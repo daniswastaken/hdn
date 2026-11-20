@@ -1,0 +1,39 @@
+name: HDN CDN Pull Request Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate Assets, LFS & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR with Git LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile || pnpm install
+
+      - name: Run HDN Doctor (strict)
+        run: pnpm hdn doctor --strict
+
+      - name: Verify full Astro CDN build
+        run: pnpm build

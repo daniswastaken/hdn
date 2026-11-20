@@ -1,0 +1,30 @@
+{
+  "name": "hdn",
+  "version": "2.0.0",
+  "description": "Handaru Delivery Network (HDN) — GitHub-backed + Git LFS static CDN with Astro registry browser and CLI tooling.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/build-manifest.mjs && astro dev",
+    "build": "node scripts/build-manifest.mjs --dist-sync && astro build && node scripts/postbuild-relative.mjs",
+    "preview": "astro preview",
+    "hdn": "node scripts/hdn.mjs",
+    "cdn:add": "node scripts/hdn.mjs add",
+    "cdn:remove": "node scripts/hdn.mjs remove",
+    "cdn:list": "node scripts/hdn.mjs list",
+    "cdn:sync": "node scripts/hdn.mjs sync",
+    "cdn:doctor": "node scripts/hdn.mjs doctor",
+    "cdn:lfs": "node scripts/hdn.mjs lfs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.5",
+    "@fontsource/jetbrains-mono": "^5.2.5",
+    "@fontsource/space-grotesk": "^5.2.5",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^5.7.10",
+    "tailwindcss": "^4.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
