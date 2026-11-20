@@ -49,7 +49,7 @@ jobs:
       - name: Commit auto-normalized assets or manifest updates (if any)
         run: |
           git config user.name "hdn-bot[bot]"
-          git config user.email "hdn-bot@users.noreply.github.com"
+          git config user.email "epmx11vvm@mozmail.com"
           if [[ -n "$(git status --porcelain)" ]]; then
             git add cdn .gitattributes src/data/manifest.json README.md
             git commit -m "chore(cdn): auto-sync vault manifest, LFS rules & inventory [skip ci]" || true
