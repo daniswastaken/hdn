@@ -21,7 +21,7 @@ A self-hosted, Git-backed Content Delivery Network (CDN) powered by **Astro 5**,
 
 <!-- HDN:STATS:START -->
 
-> **Live Inventory**: **64 assets** · **37.0 MB** total payload · **0** Git LFS objects · Branch `main` (`443cc52`)
+> **Live Inventory**: **65 assets** · **37.4 MB** total payload · **0** Git LFS objects · Branch `main` (`c373914`)
 
 | Vault Directory | Assets | Payload | Canonical Edge Route |
 | --- | ---: | ---: | --- |
@@ -32,6 +32,7 @@ A self-hosted, Git-backed Content Delivery Network (CDN) powered by **Astro 5**,
 | `cdn/media/` | 0 | 0 B | `https://cdn.handaru.dev/media/...` |
 | `cdn/projects/grafika/` | 35 | 34.7 MB | `https://cdn.handaru.dev/projects/grafika/...` |
 | `cdn/projects/prefect/` | 3 | 2.15 MB | `https://cdn.handaru.dev/projects/prefect/...` |
+| `cdn/reforged/` | 1 | 435.5 KB | `https://cdn.handaru.dev/reforged/...` |
 | `cdn/svg/` | 3 | 1.69 KB | `https://cdn.handaru.dev/svg/...` |
 
 <!-- HDN:STATS:END -->

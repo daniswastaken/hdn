@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generatedAt": "2026-11-20T11:42:44.015Z",
+  "generatedAt": "2026-11-20T11:46:24.552Z",
   "repo": {
     "owner": "daniswastaken",
     "name": "hdn",
@@ -11,17 +11,17 @@
     "rawBase": "https://raw.githubusercontent.com/daniswastaken/hdn",
     "mediaBase": "https://media.githubusercontent.com/media/daniswastaken/hdn",
     "branch": "main",
-    "commit": "443cc524c9fcd50366e8925d59867a674c6cd9cc",
-    "shortCommit": "443cc52",
+    "commit": "c37391419aa73158b5051990d573f7e195152e75",
+    "shortCommit": "c373914",
     "lfsAvailable": true
   },
   "stats": {
-    "totalAssets": 64,
-    "totalBytes": 38779806,
-    "totalSizeFormatted": "37.0 MB",
+    "totalAssets": 65,
+    "totalBytes": 39225785,
+    "totalSizeFormatted": "37.4 MB",
     "totalLfsAssets": 0,
     "byCategory": {
-      "image": 38,
+      "image": 39,
       "font": 7,
       "icon": 16,
       "svg": 3,
@@ -71,6 +71,12 @@
         "sizeFormatted": "2.15 MB"
       },
       {
+        "path": "reforged",
+        "count": 1,
+        "bytes": 445979,
+        "sizeFormatted": "435.5 KB"
+      },
+      {
         "path": "svg",
         "count": 3,
         "bytes": 1735,
@@ -113,7 +119,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "fonts/inter-600.woff2",
@@ -145,7 +151,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "fonts/jetbrains-mono-400.woff2",
@@ -177,7 +183,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "fonts/jetbrains-mono-500.woff2",
@@ -209,7 +215,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "fonts/jetbrains-mono-700.woff2",
@@ -241,7 +247,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "fonts/space-grotesk-500.woff2",
@@ -273,7 +279,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "fonts/space-grotesk-700.woff2",
@@ -305,7 +311,7 @@
         "style": "normal",
         "format": "woff2"
       },
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "icons/arrow-up-right.svg",
@@ -335,7 +341,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M7 17L17 7M17 7H8M17 7V16\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.483Z"
     },
     {
       "id": "icons/check.svg",
@@ -365,7 +371,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M20 6L9 17L4 12\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/copy.svg",
@@ -395,7 +401,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <rect x=\"9\" y=\"9\" width=\"12\" height=\"12\"/>\n  <path d=\"M5 15H3V3H15V5\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/download.svg",
@@ -425,7 +431,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 3V15M12 15L7 10M12 15L17 10\"/>\n  <path d=\"M4 17V20H20V17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/file-code.svg",
@@ -455,7 +461,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M14 3H5V21H19V8L14 3Z\"/>\n  <path d=\"M14 3V8H19\"/>\n  <path d=\"M10 13L8 15L10 17M14 13L16 15L14 17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/folder.svg",
@@ -485,7 +491,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M3 5H9L11 8H21V19H3V5Z\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/github.svg",
@@ -515,7 +521,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M9 19C4.7 20.4 4.7 16.5 3 16M15 21V17.5C15 16.4 14.9 15.6 14.3 15C17.1 14.7 20 13.6 20 9C20 7.7 19.5 6.6 18.7 5.7C19 4.9 19 3.7 18.5 2.7C18.5 2.7 17.5 2.4 15 4C13.1 3.5 10.9 3.5 9 4C6.5 2.4 5.5 2.7 5.5 2.7C5 3.7 5 4.9 5.3 5.7C4.5 6.6 4 7.7 4 9C4 13.6 6.9 14.7 9.7 15C9.1 15.6 9 16.4 9 17.5V21\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/globe.svg",
@@ -545,7 +551,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <circle cx=\"12\" cy=\"12\" r=\"9\"/>\n  <path d=\"M3 12H21\"/>\n  <path d=\"M12 3C14.5 5.7 15.8 8.8 15.8 12C15.8 15.2 14.5 18.3 12 21C9.5 18.3 8.2 15.2 8.2 12C8.2 8.8 9.5 5.7 12 3Z\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/image.svg",
@@ -575,7 +581,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <rect x=\"3\" y=\"4\" width=\"18\" height=\"16\"/>\n  <circle cx=\"8.5\" cy=\"9.5\" r=\"1.5\"/>\n  <path d=\"M21 16L16 11L6 20\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/layers.svg",
@@ -605,7 +611,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 3L21 8L12 13L3 8L12 3Z\"/>\n  <path d=\"M3 12.5L12 17.5L21 12.5\"/>\n  <path d=\"M3 17L12 22L21 17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/search.svg",
@@ -635,7 +641,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/>\n  <path d=\"M15.5 15.5L21 21\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/sparkles-off.svg",
@@ -665,7 +671,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 3V7M12 17V21M3 12H7M17 12H21\"/>\n  <rect x=\"9\" y=\"9\" width=\"6\" height=\"6\"/>\n  <path d=\"M4 4L20 20\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/terminal.svg",
@@ -695,7 +701,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <rect x=\"3\" y=\"4\" width=\"18\" height=\"16\"/>\n  <path d=\"M7 9L10.5 12L7 15M12 15H17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/trash.svg",
@@ -725,7 +731,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M4 6H20M9 6V3H15V6M6 6V21H18V6M10 10V17M14 10V17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/type.svg",
@@ -755,7 +761,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M4 7V4H20V7M12 4V20M9 20H15\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "icons/upload.svg",
@@ -785,7 +791,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\" stroke-linejoin=\"miter\">\n  <path d=\"M12 15V3M12 3L7 8M12 3L17 8\"/>\n  <path d=\"M4 17V20H20V17\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.093Z"
+      "updatedAt": "2026-11-20T11:46:13.484Z"
     },
     {
       "id": "projects/grafika/2-0-hd.png",
@@ -815,7 +821,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.110Z"
+      "updatedAt": "2026-11-20T11:46:13.505Z"
     },
     {
       "id": "projects/grafika/a-distant-horizon.png",
@@ -845,7 +851,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.112Z"
+      "updatedAt": "2026-11-20T11:46:13.507Z"
     },
     {
       "id": "projects/grafika/arc-en-ciel.png",
@@ -875,7 +881,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.113Z"
+      "updatedAt": "2026-11-20T11:46:13.508Z"
     },
     {
       "id": "projects/grafika/balemoon-crimson.png",
@@ -905,7 +911,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.115Z"
+      "updatedAt": "2026-11-20T11:46:13.510Z"
     },
     {
       "id": "projects/grafika/by-the-fireplace.png",
@@ -935,7 +941,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.117Z"
+      "updatedAt": "2026-11-20T11:46:13.512Z"
     },
     {
       "id": "projects/grafika/case-of-singularity.png",
@@ -965,7 +971,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.119Z"
+      "updatedAt": "2026-11-20T11:46:13.514Z"
     },
     {
       "id": "projects/grafika/cottage-in-sight.png",
@@ -995,7 +1001,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.120Z"
+      "updatedAt": "2026-11-20T11:46:13.515Z"
     },
     {
       "id": "projects/grafika/delta-s-nature.png",
@@ -1025,7 +1031,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.121Z"
+      "updatedAt": "2026-11-20T11:46:13.516Z"
     },
     {
       "id": "projects/grafika/delta-t.png",
@@ -1055,7 +1061,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.122Z"
+      "updatedAt": "2026-11-20T11:46:13.518Z"
     },
     {
       "id": "projects/grafika/dreams-aria.png",
@@ -1085,7 +1091,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.123Z"
+      "updatedAt": "2026-11-20T11:46:13.518Z"
     },
     {
       "id": "projects/grafika/dusty-dusk.png",
@@ -1115,7 +1121,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.124Z"
+      "updatedAt": "2026-11-20T11:46:13.519Z"
     },
     {
       "id": "projects/grafika/hopes.png",
@@ -1145,7 +1151,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.125Z"
+      "updatedAt": "2026-11-20T11:46:13.520Z"
     },
     {
       "id": "projects/grafika/icy-nights.png",
@@ -1175,7 +1181,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.126Z"
+      "updatedAt": "2026-11-20T11:46:13.521Z"
     },
     {
       "id": "projects/grafika/lively-mossy.png",
@@ -1205,7 +1211,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.127Z"
+      "updatedAt": "2026-11-20T11:46:13.523Z"
     },
     {
       "id": "projects/grafika/misty-bamboo.png",
@@ -1235,7 +1241,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.130Z"
+      "updatedAt": "2026-11-20T11:46:13.526Z"
     },
     {
       "id": "projects/grafika/moon-s-trace.png",
@@ -1265,7 +1271,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.131Z"
+      "updatedAt": "2026-11-20T11:46:13.526Z"
     },
     {
       "id": "projects/grafika/nightly-canyon.png",
@@ -1295,7 +1301,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.131Z"
+      "updatedAt": "2026-11-20T11:46:13.527Z"
     },
     {
       "id": "projects/grafika/ore-s-lights.png",
@@ -1325,7 +1331,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.132Z"
+      "updatedAt": "2026-11-20T11:46:13.528Z"
     },
     {
       "id": "projects/grafika/outpost-from-afars.png",
@@ -1355,7 +1361,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.133Z"
+      "updatedAt": "2026-11-20T11:46:13.529Z"
     },
     {
       "id": "projects/grafika/phanes-of-the-ends.png",
@@ -1385,7 +1391,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.134Z"
+      "updatedAt": "2026-11-20T11:46:13.530Z"
     },
     {
       "id": "projects/grafika/reservoir.png",
@@ -1415,7 +1421,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.135Z"
+      "updatedAt": "2026-11-20T11:46:13.531Z"
     },
     {
       "id": "projects/grafika/rooms-of-points.png",
@@ -1445,7 +1451,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.137Z"
+      "updatedAt": "2026-11-20T11:46:13.533Z"
     },
     {
       "id": "projects/grafika/silence-in-echoes.png",
@@ -1475,7 +1481,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.138Z"
+      "updatedAt": "2026-11-20T11:46:13.534Z"
     },
     {
       "id": "projects/grafika/snow-s-white.png",
@@ -1505,7 +1511,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.145Z"
+      "updatedAt": "2026-11-20T11:46:13.539Z"
     },
     {
       "id": "projects/grafika/stargazer.png",
@@ -1535,7 +1541,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.145Z"
+      "updatedAt": "2026-11-20T11:46:13.540Z"
     },
     {
       "id": "projects/grafika/subtle-rainbow.png",
@@ -1565,7 +1571,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.146Z"
+      "updatedAt": "2026-11-20T11:46:13.541Z"
     },
     {
       "id": "projects/grafika/sunrise-and-moonrise.png",
@@ -1595,7 +1601,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.147Z"
+      "updatedAt": "2026-11-20T11:46:13.542Z"
     },
     {
       "id": "projects/grafika/tell-a-tale.png",
@@ -1625,7 +1631,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.149Z"
+      "updatedAt": "2026-11-20T11:46:13.544Z"
     },
     {
       "id": "projects/grafika/the-architect-s-gaze.png",
@@ -1655,7 +1661,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.150Z"
+      "updatedAt": "2026-11-20T11:46:13.545Z"
     },
     {
       "id": "projects/grafika/the-village-s-life.png",
@@ -1685,7 +1691,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.152Z"
+      "updatedAt": "2026-11-20T11:46:13.546Z"
     },
     {
       "id": "projects/grafika/the-waits-of-eternity.png",
@@ -1715,7 +1721,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.153Z"
+      "updatedAt": "2026-11-20T11:46:13.548Z"
     },
     {
       "id": "projects/grafika/underground-s-stars.png",
@@ -1745,7 +1751,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.155Z"
+      "updatedAt": "2026-11-20T11:46:13.550Z"
     },
     {
       "id": "projects/grafika/warmth-of-coral.png",
@@ -1775,7 +1781,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.156Z"
+      "updatedAt": "2026-11-20T11:46:13.551Z"
     },
     {
       "id": "projects/grafika/warped-in-lights.png",
@@ -1805,7 +1811,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.158Z"
+      "updatedAt": "2026-11-20T11:46:13.553Z"
     },
     {
       "id": "projects/grafika/wings-of-sea.png",
@@ -1835,7 +1841,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.159Z"
+      "updatedAt": "2026-11-20T11:46:13.554Z"
     },
     {
       "id": "projects/prefect/demo-1.png",
@@ -1865,7 +1871,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.162Z"
+      "updatedAt": "2026-11-20T11:46:13.556Z"
     },
     {
       "id": "projects/prefect/demo-2.png",
@@ -1895,7 +1901,7 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.164Z"
+      "updatedAt": "2026-11-20T11:46:13.558Z"
     },
     {
       "id": "projects/prefect/demo-3.png",
@@ -1925,7 +1931,37 @@
       "usesCurrentColor": false,
       "inlineSvg": null,
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.165Z"
+      "updatedAt": "2026-11-20T11:46:13.559Z"
+    },
+    {
+      "id": "reforged/reforged.png",
+      "name": "reforged.png",
+      "stem": "reforged",
+      "ext": ".png",
+      "category": "image",
+      "directory": "reforged",
+      "project": null,
+      "cdnPath": "/reforged/reforged.png",
+      "legacyPath": null,
+      "thumbPath": "/_thumbs/reforged/reforged.png.webp",
+      "gitPath": "cdn/reforged/reforged.png",
+      "bytes": 445979,
+      "sizeFormatted": "435.5 KB",
+      "mime": "image/png",
+      "sha256": "bbd1b86c27f18f532f8bd03f743eee2378b449277ffd887030dcac3b0867408c",
+      "shortHash": "bbd1b86c27f1",
+      "integrity": "sha256-u9G4bCfxj1Mvi9A/dD7uI3i0SSd//YhwMNysOwhnQIw=",
+      "lfs": false,
+      "dimensions": {
+        "width": 850,
+        "height": 364
+      },
+      "aspectRatio": 2.335,
+      "viewBox": null,
+      "usesCurrentColor": false,
+      "inlineSvg": null,
+      "font": null,
+      "updatedAt": "2026-11-20T11:46:13.560Z"
     },
     {
       "id": "svg/handaru-grid-mark.svg",
@@ -1955,7 +1991,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\" fill=\"none\">\n  <rect x=\"2\" y=\"2\" width=\"60\" height=\"60\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <path d=\"M22 2V62M42 2V62M2 22H62M2 42H62\" stroke=\"currentColor\" stroke-width=\"1\" stroke-opacity=\"0.35\"/>\n  <rect x=\"14\" y=\"14\" width=\"16\" height=\"16\" stroke=\"#FF5722\" stroke-width=\"2\"/>\n  <rect x=\"34\" y=\"34\" width=\"16\" height=\"16\" fill=\"#FF5722\"/>\n  <circle cx=\"42\" cy=\"22\" r=\"5\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <path d=\"M14 50L30 34\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.165Z"
+      "updatedAt": "2026-11-20T11:46:13.560Z"
     },
     {
       "id": "svg/hdn-badge.svg",
@@ -1985,7 +2021,7 @@
       "usesCurrentColor": false,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 164 28\" fill=\"none\">\n  <rect x=\"0.5\" y=\"0.5\" width=\"163\" height=\"27\" fill=\"#09090B\" stroke=\"#27272A\"/>\n  <rect x=\"0.5\" y=\"0.5\" width=\"46\" height=\"27\" fill=\"#FF5722\"/>\n  <text x=\"23\" y=\"18\" text-anchor=\"middle\" fill=\"#09090B\" font-family=\"monospace\" font-size=\"11\" font-weight=\"700\">HDN</text>\n  <circle cx=\"59\" cy=\"14\" r=\"3\" fill=\"#10B981\"/>\n  <text x=\"69\" y=\"18\" fill=\"#F4F4F5\" font-family=\"monospace\" font-size=\"10\" font-weight=\"600\" letter-spacing=\"0.8\">CDN // ONLINE</text>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.166Z"
+      "updatedAt": "2026-11-20T11:46:13.561Z"
     },
     {
       "id": "svg/hdn-logo.svg",
@@ -2015,7 +2051,7 @@
       "usesCurrentColor": true,
       "inlineSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 40\" fill=\"none\">\n  <rect x=\"1\" y=\"1\" width=\"38\" height=\"38\" stroke=\"#FF5722\" stroke-width=\"2\"/>\n  <path d=\"M10 11V29M10 20H20M20 11V29M25 11H30C31.6569 11 33 12.3431 33 14V26C33 27.6569 31.6569 29 30 29H25V11Z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"square\"/>\n  <rect x=\"48\" y=\"8\" width=\"4\" height=\"4\" fill=\"#FF5722\"/>\n  <path d=\"M58 10H64M58 20H72M58 29H84\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"square\"/>\n  <text x=\"58\" y=\"25\" fill=\"currentColor\" font-family=\"monospace\" font-size=\"11\" font-weight=\"700\" letter-spacing=\"2\">HDN.EDGE</text>\n</svg>",
       "font": null,
-      "updatedAt": "2026-11-20T11:42:34.166Z"
+      "updatedAt": "2026-11-20T11:46:13.561Z"
     }
   ]
 }
